@@ -158,3 +158,6 @@ Complete the following assignments:
 * [GitHub's Learning Lab](https://lab.github.com/)
 * [Education community forum](https://education.github.community/)
 * [GitHub community forum](https://github.community/)
+* [Learn Git interactively in your browser](https://learngitbranching.js.org/)
+* [Pro Git (free ebook)](https://git-scm.com/book/en/v2)
+* [Atlassian's Git tutorials](https://www.atlassian.com/git/tutorials)
