@@ -15,7 +15,7 @@ We’ll also provide links to additional resources for you to continue your jour
 
 Git is a **distributed Version Control System (VCS)**.
 
-A **version control system** is a software tool that helps you track changes to a pile o' files - these can be any kinds of files, images, plain text source code files, even binaries. Every time changes are made to a file, you can tell the version control system, "hey, keep track of the changes I just made to this file". In typical usage, we will be keeping track of plain text, source code files. It's not recommended to put "generated" artifacts into Git (like a compiled executable that only runs on Linux, or a Windows .exe file or a macOS application bundle) because these are *derivatives* and often change. Instead, you want to put the *source material* into Git, the things that are used to create the derivative.
+A **version control system** is a software tool that helps you track changes to a pile o' files. These can be any kinds of files: images, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, or any other binary format. Every time changes are made to a file, you can tell the version control system, "Hey, keep track of the changes I just made to this file". In typical usage, we will be keeping track of plain-text source code files. You should avoid putting *generated* artifacts into Git like compiled executables (e.g., a Windows .exe or a macOS application bundle binary), or compiled C code / Java `.class` files. This is because these artifacts are *derivatives* and change as often as the source code changes. Instead, you should only put the *source material* into Git, the things that are used to create the derivative.
 
 ### Why do we need version control systems?
 
@@ -27,7 +27,9 @@ or this:
 
 ![NetLogo: Neolithic Ecological expansion many versions](images/neolithic-versions.png)
 
-Git helps you bypass these messy filename-based versioning systems and helps you keep track of changes to your code and collaborate and share your changes with others in a disciplined, systematic way. You can keep a record of what you’ve worked on alongside plaintext notes (these are called *commit log messages* and we will go into more detail about them later). It also allows you to easily revert back to older versions as needed giving you the freedom to experiment in your code without having to worry about whether you can undo all the changes or find the base working version you wanted to keep. It also comes with a lot of tools that make working with others easier — groups of people can work together on the same project and merge their changes into one final source that preserves transparency and the provenance of which changes came from where.
+Git helps you bypass these messy filename-based versioning systems and helps you keep track of changes to your code and collaborate and share your changes with others in a disciplined, systematic way. You can keep a record of what you’ve worked on alongside plaintext notes (these are called *commit log messages*, we'll go over them in more detail later). 
+
+Git also lets you easily switch between older and newer versions, which gives you the freedom to experiment in your code without having to worry about whether you can undo all the changes or find the base working version you wanted to keep. It also comes with a lot of tools that make working with others easier — groups of people can work together on the same project and merge their changes into one final source that preserves transparency and the provenance of which changes came from where.
 
 GitHub is a way to use the same power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
