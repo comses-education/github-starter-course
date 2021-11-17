@@ -35,21 +35,27 @@ GitHub is home to some of the most advanced technologies in the world. Whether y
 
 ## Git Started
 
-We'll first start with some common terms and definitions for them. The 
+Let's start with some common terms and definitions.
 
 ### Repositories
 
-A repository is where your project work happens--think of it as your project folder. It contains all of your project’s files and revision history.  You can work within a repository alone or invite others to collaborate with you on those files.
+A repository is where your project work happens -- think of it as your root project folder that contains all your project’s files (and revision history, in the git managed `.git` directory).  
+You can work within a repository alone or invite others to collaborate with you on those files. Repositories are just
+that pile of files with the special `.git` directory accompanying them and can reside locally on your laptop or desktop
+computer, or on a server in the cloud like GitHub.
 
 ### Cloning 
 
-When a repository is created with GitHub, it’s stored remotely in the ☁️. You can clone a repository to create a local copy on your computer and then use Git to sync the two. This makes it easier to fix issues, add or remove files, and push larger commits. You can also use the editing tool of your choice as opposed to the GitHub UI. Cloning a repository also pulls down all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project! This can be helpful if you experiment with your project and then realize you liked a previous version more. 
+When a repository is created on GitHub.com (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can clone this repository to create a local copy on your computer and then use Git to keep the two repositories synced up. 
+
+This makes it easier to fix issues, add or remove files, and push larger commits. You can also use the editing tool of your choice as opposed to the GitHub UI. Cloning a repository also pulls down all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project! This can be helpful if you experiment with your project and then realize you liked a previous version more. 
+
 To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
 ### Committing and pushing
 **Committing** and **pushing** are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your project that you want to “checkpoint.” You can also add a helpful **commit message** to remind yourself or your teammates what work you did (e.g. “Added a README with information about our project”).
 
-Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to your remote repository. Committing and pushing may feel new at first, but we promise you’ll get used to it 🙂
+Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to your remote repository. Committing and pushing may feel new at first, like all things it'll become like second nature once you build Git into your development workflow 🙂
 
 ## 💻 GitHub terms to know 
 
@@ -92,15 +98,41 @@ To learn more about using GitHub’s flavor of markdown, read ["Basic Writing an
 
 ### Beginners Git Workflow
 
-Before we get into the 
+Now that we have some basic terminology for Git and GitHub under our belt we can start to go into typical workflows for
+how we can use Git to manage changes to our files. 
 
-### Advanced
+The simplest Git workflow is to have a single committer, you, commit and push all of your changes to your local
+repository and synchronize that with GitHub. 
 
-The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work. 
+0. Have a Git repository cloned on your local computer e.g., `C:\Users\my-username\GitHub\my-first-fisher-price-git-repository`
+1. Make some changes to your files in your git repository
+2. (Alternatively, you can also make changes to your files directly in the GitHub web interface)
+3. Commit your changes selectively and include meaningful log messages
+4. Push them to your hosted repository on GitHub.com
+
+## Advanced
+
+The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work. It uses Pull Requests and branches to manage incoming changes and is better suited to larger scale collaborative development where you have many people working in tandem on code.
 
 https://docs.github.com/en/get-started/quickstart/github-flow
 
+## General Git Guidelines
 
+1. **Keep commits small and isolated** if you can. Think of commits as logical, self-contained checkpoints of your code, 
+   e.g., 
+        - add a new feature
+        - fix a bug
+        - improve a visualization
+        - improve text labels or documentation
+        - fix a typo or other speling error 
+2. **Commit early, commit often** and frequently synchronize your work to make sure your local version of the Git
+   repository doesn't become stale and out-of-date. This is less of a problem when you are the only one working on
+   things, but is still a good habit to keep.
+3. **Write meaningful log messages** that clearly document the intent of your change(s). Think of commit log messages as notes to your
+   future self and/or your future collaborators.
+4. **Use tags and releases** to keep track of important coding milestones. The exact version of your computational model 
+   that generated data leading to publishable findings? That should be a new tag and release with a [DOI
+   attached to that release](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
 
 
 ## Next Steps
