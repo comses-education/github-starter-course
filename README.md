@@ -1,20 +1,41 @@
-# :wave: The Basics of GitHub 
+# :wave: The Basics of Git and GitHub
 
 ## 🤓 Course overview and learning outcomes 
 
-The goal of this course is to give you a brief introduction to GitHub. We’ll also provide you with materials for further learning and a few ideas to get you started on our platform. 🚀
+The goal of this course is to provide a crash course to Git and GitHub, intended for people with little to no experience with either.
+
+### Objectives
+
+- develop a clear mental model of what Git is, how it works behind the scenes, and how it ties into GitHub
+- become comfortable with the GitHub web interface. GitHub is an excellent place (but not the only one!) to manage and interact with Git repositories online.
+
+We’ll also provide links to additional resources for you to continue your journey with Git and GitHub. 🚀
 
 ## :octocat: Git and GitHub
 
-Git is a **distributed Version Control System (VCS)**, which means it is a useful tool for easily tracking changes to your code, collaborating, and sharing. With Git you can track the changes you make to your project so you always have a record of what you’ve worked on and can easily revert back to an older version if need be. It also makes working with others easier—groups of people can work together on the same project and merge their changes into one final source!
+Git is a **distributed Version Control System (VCS)**.
 
-GitHub is a way to use the same power of Git all online with an easy-to-use interface. It’s used across the software world and beyond to collaborate and maintain the history of projects.
+A **version control system** is a software tool that helps you track changes to a pile o' files - these can be any kinds of files, images, plain text source code files, even binaries. Every time changes are made to a file, you can tell the version control system, "hey, keep track of the changes I just made to this file". In typical usage, we will be keeping track of plain text, source code files. It's not recommended to put "generated" artifacts into Git (like a compiled executable that only runs on Linux, or a Windows .exe file or a macOS application bundle) because these are *derivatives* and often change. Instead, you want to put the *source material* into Git, the things that are used to create the derivative.
+
+### Why do we need version control systems?
+
+If you've ever had to collaborate with others on writing a paper or on a team coding project, you have probably experienced something like this:
+
+![PhD Comics: final.doc](https://phdcomics.com/comics/archive/phd101212s.gif)
+
+or this:
+
+![NetLogo: Neolithic Ecological expansion many versions](images/neolithic-versions.png)
+
+Git helps you bypass these messy filename-based versioning systems and helps you keep track of changes to your code and collaborate and share your changes with others in a disciplined, systematic way. You can keep a record of what you’ve worked on alongside plaintext notes (these are called *commit log messages* and we will go into more detail about them later). It also allows you to easily revert back to older versions as needed giving you the freedom to experiment in your code without having to worry about whether you can undo all the changes or find the base working version you wanted to keep. It also comes with a lot of tools that make working with others easier — groups of people can work together on the same project and merge their changes into one final source that preserves transparency and the provenance of which changes came from where.
+
+GitHub is a way to use the same power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
 GitHub is home to some of the most advanced technologies in the world. Whether you're visualizing data or building a new game, there's a whole community and set of tools on GitHub that can get you to the next step. This course starts with the basics of GitHub, but we'll dig into the rest later.
 
-## :octocat: Understanding the GitHub flow 
+## Git Started
 
-The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work.
+We'll first start with some common terms and definitions for them. The 
 
 ### Repositories
 
@@ -67,6 +88,20 @@ To learn more about your user profile and adding and updating your profile READM
 
 You might have noticed already, but you can add some fun styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs and images to help convey your point!
 To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
+
+
+### Beginners Git Workflow
+
+Before we get into the 
+
+### Advanced
+
+The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work. 
+
+https://docs.github.com/en/get-started/quickstart/github-flow
+
+
+
 
 ## Next Steps
 
