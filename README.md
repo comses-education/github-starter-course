@@ -146,11 +146,9 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 2. **Commit early, commit often** and frequently synchronize your work to make sure your local version of the Git
    repository doesn't become stale and out-of-date. This is less of a problem when you are the only one working on
    things, but is still a good habit to keep.
-3. **Write meaningful log messages** that clearly document the intent of your change(s). Think of commit log messages as notes to your
-   future self and/or your future collaborators.
-4. **Use tags and releases** to keep track of important coding milestones. The exact version of your computational model 
-   that generated data leading to publishable findings? That should be a new tag and release with a [DOI
-   attached to that release](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
+3. **Write meaningful log messages** that clearly document the intent of your change(s) and any thorny assumptions. Commit log messages are notes to your
+   peers as well as your future self and future collaborators.
+4. **Use tags and releases** to keep track of important coding milestones. Did this exact version of your computational model pass all of its tests and generate harrowing data that lead to publishable findings? Make sure it's fully synced with your GitHub repository (e.g., **commit** and **push** any available changes), then create a [release, tag, and DOI](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) that points at this version.
 
 
 ## Next Steps
