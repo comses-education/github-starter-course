@@ -10,13 +10,13 @@ The goal of this course is to provide a quick but complete introduction to versi
 - become more familiar with the GitHub web interface to edit files, clone and fork repositories, manage branches and pull requests
 - practice simple git workflows and become more familiar with git GUI clients (e.g., GitHub Desktop or IDEs like VS Code) to interact with your local and remote Git repositories
 
-If these are too simple for you, great! We also have [links to more advanced resources](#additional-resources) that we've found useful over the years. 🚀
+If these are too simple for you, great! We also have [links to more advanced resources](#additional-resources-) that we've found useful over the years. 🚀
 
 ## :octocat: Git and GitHub
 
 Git is a **distributed Version Control System (VCS)**.
 
-A **version control system** is a software tool that helps you track changes to a pile o' files. These can be any kinds of files: images, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, Word documents, PDFs, etc. Whenever you make changes to a file that you want to keep track of you can tell the version control system, "Hey! Please keep track of the current state of this file." and it will efficiently store the difference between the current state of the file after your changes and the way the file was the last time you told the version control system, "Hey! Please keep track of the current state of this file.". 
+A **version control system** is a software tool that helps you track changes to a pile o' files. These can be any kinds of files: images, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, Word documents, PDFs, etc. Whenever you make changes to a file that you want to keep track of you can tell the version control system, _"Hey! Please keep track of the current state of this file."_ and it will efficiently store the difference between the current state of the file after your changes and the way the file was the last time you told the version control system, _"Hey! Please keep track of the current state of this file."_
 
 We usually keep track of plain-text files in a version control system like Git: these include source code, configuration files and scripts. It's fine to store binary formats in git as well but they are stored a little less efficiently and can make downloading ("checking out", or "cloning") your git repository slower. 
 
