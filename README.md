@@ -2,24 +2,29 @@
 
 ## 🤓 Course overview and learning outcomes 
 
-The goal of this course is to provide a crash course to Git and GitHub, intended for people with little to no experience with either.
+The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub, and is intended for people with little to no experience with either.
 
 ### Objectives
 
-- develop a clear mental model of what Git is, how it works behind the scenes, and how it ties into GitHub
-- become comfortable with the GitHub web interface. GitHub is an excellent place (but not the only one!) to manage and interact with Git repositories online.
+- develop a clear conceptual model that answers *What are version control systems and why should I use them? What is Git and how do I use it?*
+- become more familiar with the GitHub web interface to edit files, clone and fork repositories, manage branches and pull requests
+- practice simple git workflows and become more familiar with git GUI clients (e.g., GitHub Desktop or IDEs like VS Code) to interact with your local and remote Git repositories
 
-We’ll also provide links to additional resources for you to continue your journey with Git and GitHub. 🚀
+If these are too simple for you, great! We also have [links to more advanced resources](#additional-resources) that we've found useful over the years. 🚀
 
 ## :octocat: Git and GitHub
 
 Git is a **distributed Version Control System (VCS)**.
 
-A **version control system** is a software tool that helps you track changes to a pile o' files. These can be any kinds of files: images, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, or any other binary format. Every time changes are made to a file, you can tell the version control system, "Hey, keep track of the changes I just made to this file". In typical usage, we will be keeping track of plain-text source code files. You should avoid putting *generated* artifacts into Git like compiled executables (e.g., a Windows .exe or a macOS application bundle binary), or compiled C code / Java `.class` files. This is because these artifacts are *derivatives* and change as often as the source code changes. Instead, you should only put the *source material* into Git, the things that are used to create the derivative.
+A **version control system** is a software tool that helps you track changes to a pile o' files. These can be any kinds of files: images, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, Word documents, PDFs, etc. Whenever you make changes to a file that you want to keep track of you can tell the version control system, "Hey! Please keep track of the current state of this file." and it will efficiently store the difference between the current state of the file after your changes and the way the file was the last time you told the version control system, "Hey! Please keep track of the current state of this file.". 
+
+We usually keep track of plain-text files in a version control system like Git: these include source code, configuration files and scripts. It's fine to store binary formats in git as well but they are stored a little less efficiently and can make downloading ("checking out", or "cloning") your git repository slower. 
+
+**You should avoid** putting *generated* artifacts into Git like compiled executables (e.g. Windows .exe or macOS application bundle), or compiled C code / Java `.class` files. This is because these artifacts are *derivatives* and change as often as the source code changes. In addition, they tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, you should only put *source material* into Git, the things that are used to create the derivative. So instead of committing the hauntingly evocative figure you generated for your publication, commit the code and permanent references to the input datasets needed to generate that hauntingly evocative figure.
 
 ### Why do we need version control systems?
 
-If you've ever had to collaborate with others on writing a paper or on a team coding project, you have probably experienced something like this:
+If you've ever had to collaborate with others on a paper or team coding project, you may have experienced something like this:
 
 ![PhD Comics: final.doc](https://phdcomics.com/comics/archive/phd101212s.gif)
 
@@ -27,45 +32,56 @@ or this:
 
 ![NetLogo: Neolithic Ecological expansion many versions](images/neolithic-versions.png)
 
-Git helps you bypass these messy filename-based versioning systems and helps you keep track of changes to your code and collaborate and share your changes with others in a disciplined, systematic way. You can keep a record of what you’ve worked on alongside plaintext notes (these are called *commit log messages*, we'll go over them in more detail later). 
+These are typical ad-hoc filename based versioning systems where you change the name of the file each time you make a change. What's lacking? 
 
-Git also lets you easily switch between older and newer versions, which gives you the freedom to experiment in your code without having to worry about whether you can undo all the changes or find the base working version you wanted to keep. It also comes with a lot of tools that make working with others easier — groups of people can work together on the same project and merge their changes into one final source that preserves transparency and the provenance of which changes came from where.
+Git helps you maintain a clean record of what you’ve worked on - which files changed, what were the changes, and why were the changes made. It's also important to know how to  easily switch between versions so you can always get back to that Last Known Good Setup that you had before you began tinkering or experimenting with something new.
 
-GitHub is a way to use the same power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
+Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *Which changes came from where, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of scientific code requires discipline and maintenance like gardening. 
 
-GitHub is home to some of the most advanced technologies in the world. Whether you're visualizing data or building a new game, there's a whole community and set of tools on GitHub that can get you to the next step. This course starts with the basics of GitHub, but we'll dig into the rest later.
+GitHub is a way to use the power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
-## Git Started
+## Jargon
 
 Let's start with some common terms and definitions.
 
 ### Repositories
 
-A repository is where your project work happens -- think of it as your root project folder that contains all your project’s files (and revision history, in the git managed `.git` directory).  
-You can work within a repository alone or invite others to collaborate with you on those files. Repositories are just
-that pile of files with the special `.git` directory accompanying them and can reside locally on your laptop or desktop
-computer, or on a server in the cloud like GitHub.
+A repository is where your project work happens -- think of it as your root project folder that contains all your project’s files. To start working with a Git repository, you typically [clone](#cloning-a-repository) it first which downloads a local copy of the Git repository onto your computer. 
 
-### Cloning 
+Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️ on GitHub, GitLab, BitBucket, etc).
 
-When a repository is created on GitHub.com (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can clone this repository to create a local copy on your computer and then use Git to keep the two repositories synced up. 
+GitHub repositories can contain a **README** plain text file in Markdown format. Every directory managed in your Git / GitHub repository will display its README when you view that directory on GitHub - here are [some](https://github.com/comses/winter-school-2022/tree/main/projects) [examples](https://github.com/comses/winter-school-2022/tree/main/initial-tutorial).
 
-This makes it easier to fix issues, add or remove files, and push larger commits. You can also use the editing tool of your choice as opposed to the GitHub UI. Cloning a repository also pulls down all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project! This can be helpful if you experiment with your project and then realize you liked a previous version more. 
+It's good practice to add a README file to your repository to tell other people why your project is useful, what they can do with your project, and how they can use it. We are using this README to communicate how to learn Git and GitHub with you. 😄 
+
+To learn more about repositories read ["Creating, Cloning, and Archiving Repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
+
+
+#### Advanced
+
+A cloned Git repository is your pile o' files with an additional `.git` directory relative to the repository's root directory with all of the magic Git book-keeping and metadata representing the clear and transparent provenance trail of *which changes came from where, when, from whom, and why*.
+
+Whenever you are doing Git things (i.e., executing Git commands) you're using the `git` program to interact with the stuff inside the managed `.git` directory of a Git repository.
+
+### Cloning a repository
+
+When a repository is created on GitHub.com (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can **clone this repository** to create a local copy on your computer and then use Git to keep the two repositories synced. 
+
+This makes it easier to work on new features, fix bugs, and push larger commits that affect lots of files. When you **clone a repository**, downloading it to your local computer, you can use your favorite text editor as opposed to the GitHub UI to edit and modify these files (or a programming platform application like NetLogo!).
+
+Cloning a repository also pulls all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. This means you can switch to any version that was stored on GitHub at any point.
 
 To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
 ### Committing and pushing
-**Committing** and **pushing** are how you can add the changes you made on your local machine to the remote repository in GitHub. That way your instructor and/or teammates can see your latest work when you’re ready to share it. You can make a commit when you have made changes to your project that you want to “checkpoint.” You can also add a helpful **commit message** to remind yourself or your teammates what work you did (e.g. “Added a README with information about our project”).
 
-Once you have a commit or multiple commits that you’re ready to add to your repository, you can use the push command to add those changes to your remote repository. Committing and pushing may feel new at first, like all things it'll become like second nature once you build Git into your development workflow 🙂
+**Committing** and **pushing** are how you add the changes you made on your local machine to a remote repository on GitHub. When you are ready to share your changes, **commit** and **push** them to GitHub so your team mentor and teammates will be able to see your latest work and **pull** it to their local Git repositories.
 
-## 💻 GitHub terms to know 
+You should create a Git commit whenever you have made changes to your project that you are ready to formally save and “checkpoint.” Be sure to add a helpful **commit message** to remind yourself and your teammates what you did and why and any other relevant details that might be missing from the code itself.
 
-### Repositories 
-We mentioned repositories already, they are where your project work happens, but let’s talk a bit more about the details of them! As you work more on GitHub you will have many repositories which may feel confusing at first. Fortunately, your ["GitHub dashboard"](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/about-your-personal-dashboard) helps to easily navigate to your repositories and see useful information about them. Make sure you’re logged in to see it!
+Once you have commit(s) ready to send to your GitHub repository, use the **push** command to add those changes to your remote repository.
 
-Repositories also contain **README**s. You can add a README file to your repository to tell other people why your project is useful, what they can do with your project, and how they can use it. We are using this README to communicate how to learn Git and GitHub with you. 😄 
-To learn more about repositories read ["Creating, Cloning, and Archiving Repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
+## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
 ### Branches
 You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically, you might create a new branch from the default branch of your repository—main. This makes a new working copy of your repository for you to experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository.
@@ -149,7 +165,7 @@ Complete the following assignments:
 * (Optional) Go to your user dashboard and create a new repository. Experiment with the features within that repository to familiarize yourself with them. 
 * [Let us know what you liked or didn’t like about the content of this course](https://support.github.com/contact/education). What would you like to see more of? What would be interesting or helpful to your learning journey? 
 
-## 📚  Resources 
+## Additional Resources 📚
 * [A short video explaining what GitHub is](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
 * [Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
 * [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
