@@ -40,13 +40,13 @@ Git and GitHub can help you transparently document and preserve the provenance o
 
 GitHub is a way to use the power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
-## Jargon
+## Key Concepts
 
 Let's start with some common terms and definitions.
 
 ### Repositories
 
-A repository is where your project work happens -- think of it as your root project folder that contains all your project’s files. To start working with a Git repository, you typically [clone](#cloning-a-repository) it first which downloads a local copy of the Git repository onto your computer. 
+A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone](#cloning-a-repository) it, which downloads a local copy of the Git repository onto your computer. 
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️ on GitHub, GitLab, BitBucket, etc).
 
@@ -63,7 +63,7 @@ A cloned Git repository is your pile o' files with an additional `.git` director
 
 Whenever you are doing Git things (i.e., executing Git commands) you're using the `git` program to interact with the stuff inside the managed `.git` directory of a Git repository.
 
-### Cloning a repository
+### Clone a repository
 
 When a repository is created on GitHub.com (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can **clone this repository** to create a local copy on your computer and then use Git to keep the two repositories synced. 
 
@@ -73,13 +73,51 @@ Cloning a repository also pulls all the repository data that GitHub has at that 
 
 To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
-### Committing and pushing
+#### Follow-along Assignment
 
-**Committing** and **pushing** are how you add the changes you made on your local machine to a remote repository on GitHub. When you are ready to share your changes, **commit** and **push** them to GitHub so your team mentor and teammates will be able to see your latest work and **pull** it to their local Git repositories.
+Please clone this repository now. In GitHub Desktop, click File -> Clone repository <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> and enter the URL from the Code button - it should be something like `https://github.com/<yourusername>/github-starter-course`
+like 
 
-You should create a Git commit whenever you have made changes to your project that you are ready to formally save and “checkpoint.” Be sure to add a helpful **commit message** to remind yourself and your teammates what you did and why and any other relevant details that might be missing from the code itself.
+![Clone this repository](images/git-clone.png)
 
-Once you have commit(s) ready to send to your GitHub repository, use the **push** command to add those changes to your remote repository.
+
+### Commit and push
+
+**Commits** are how you tell Git you are ready to record the changes you've made to a file or collection of files. It's a good rule of thumb to keep commits small and self contained - if you fixed a bug and added a test that exposes the bug, make a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
+
+Don't fix a bug, add a feature, change the way a function is implemented, and rename some variables all in the same commit. It'll make it a lot harder to pick out what was done and what was being recorded.
+
+Instead, make each of those things their own commit, each representing one small(ish) localized change.
+
+A `commit` as a discrete data object with useful metadata about the set of changes that were made to the repository. What kinds of things do you think they need to keep track of? 
+
+1. the set of files that were changed (called the _changeset_)
+2. Its "parent" commit. Every commit data object keeps track of its parent commit except the very first root commit initializing a Git repository
+3. the actual file level differences between the files in the _changeset_ and what was in those files previously, in this commit's "parent" commit
+4. provenance metadata: a commit log message that you write to explain the commit, the git username and email of the commit's author, and more
+5. a unique hash ID (you'll see these often on GitHub)
+6. What else you would keep track of if you were Git?
+
+On the command line, this is a 2-phase process. First you **add** files to your commit, telling git that you want to keep track of these files, then you **commit** them, formally marking them as part of your commit and adding associating a commit log message with that _changeset_.
+
+With GitHub Desktop, you'll click checkboxes on the files you want to commit (and remember to uncheck files you **don't** want to commit), enter a log summary and descriptive message to remind your future self and collaborators what you did and why and other relevant non-obvious details that would be difficult to glean from the code itself. Then click the "Commit" button.
+
+![Github Desktop commit](images/github-desktop-commit.png)
+
+After you've committed your changes you'll be able to **push** those commits to add them to the **remote** GitHub repository.
+
+![GitHub Desktop push origin](images/github-desktop-push-origin.png)
+
+
+
+Summary: use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. They can also easily **pull** those changes into their local Git repositories to test them out or build on them.
+
+
+### Fetch and pull
+
+`Fetch`
+
+**Fetching** or **pulling** are how 
 
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
