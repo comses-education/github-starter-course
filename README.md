@@ -279,7 +279,7 @@ As you have already learned in the initial tutorial videos, code should always h
 
 Copy information about the model to a plain text document. The information can be the description stored in the `Info` tab in the Netlogo model. Or, it can be the description that accompanied the model in its online archive.
 
-Use a text editor to create a file called documentation and paste the model description into it. 
+Use a text editor to create a file named `documentation.md` and paste the model description into it. 
 
 You should now have a NetLogo model and a documentation file in your repository. Don't forget to **commit** them with clear and cogent commit log messages (and include a citation or permanent URL to the model) and **push** them back to GitHub!
 
