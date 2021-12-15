@@ -229,6 +229,39 @@ When working with branches, you can use a pull request to tell others about the 
 
 To learn more about pull requests, read ["About Pull Requests"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
 
+### Assignment 3
+
+Create a branch through GitHub Desktop and on the GitHub web interface. Name the branch you create in GitHub Desktop `gh-desktop` and the GitHub web branch `gh-web`. 
+
+#### Branching in GitHub Desktop 
+
+You can create a branch in GitHub Desktop by clicking on the `Current branch` button in the middle between the `Current repository` and the `Fetch origin` / `Pull origin` / `Push origin` button (we'll call that rightmost button the `synchronize` button from now on`).
+
+![Create a branch](images/github-desktop-create-branch.png)
+
+Depending on the state of your local Git repository an additional dialog may pop up asking you if you want to `Leave my changes on ...` or `Bring my changes into ...`. This means you had uncommitted / unpushed changes in your local repository and GitHub Desktop wants to know what you want to do with those changes. Leaving the changes puts them into a **stash** where you can retrieve the changes later when you want them. Bringing the changes with you makes the new branch you are creating have the file changes right there to commit / push when you are ready.
+
+![Switch branch dialog](images/github-desktop-switch-branch-dialog.png)
+
+When you are done creating the branch, you'll still need to **push** it to GitHub.com - click the Synchronize button that should now have the label `Publish branch`. This only appears if the branch does not already exist to GitHub, otherwise it'll be one of the usual `Fetch origin | Pull origin | Push origin` labels. 
+
+After you publish the branch to GitHub the label should change back to `Fetch origin`.
+
+-----
+
+Now that you have created a new branch, please find a NetLogo model to add to this branch and add information about the model in a documentation file.
+
+You can find a model of your choice from The [Netlogo Modeling Commons] (http://modelingcommons.org/) or from [the CoMSES Computational Model Library] (https://www.comses.net/). Find a model that is related to your own interests! 
+
+Once you have chosen and downloaded a Netlogo model, save the file to your local Github repository branch that you created.
+
+As you have already learned in the initial tutorial videos, code should always have documentation. Therefore, you will need to add some documentation to accompany your Netlogo model. 
+
+Copy information about the model to a plain text document. The information can be the description stored in the `Info` tab in the Netlogo model. Or, it can be the description that accompanied the model in its online archive.
+
+Use a text editor to create a file called documentation and paste the model description into it. 
+
+You should now have a NetLogo model and a documentation file in your repository. Don't forget to **commit** them with clear and cogent commit log messages (and include a citation or permanent URL to the model) and **push** them back to GitHub!
 
 ### Issues
 Issues are a way to track enhancements, tasks, or bugs for your work on GitHub. Issues are a great way to keep track of all the tasks you want to work on for your project and let others know what you plan to work on. You can also use issues to tell a favorite open source project about a bug you found or a feature you think would be great to add.
@@ -286,13 +319,12 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 Make sure you've complete the following assignments:
 
-* [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and clone this repository to your local machine.
-* [Assignment 1](#assignment-1) - Create a new markdown file in this repository named `documentation.md` and experiment with different Markdown styles. Feel free to let us know what you've learned, and what you are still confused about.
-* [Assignment 2](#assignment-2) - Create a new branch and add a NetLogo file to that branch (feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers)
-* [Assignment 3](#assignment-3) - Open a pull request and tag us via the `@` symbol, e.g., `@alee` to let us know that you’ve finished this course.
+* [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and _clone_ this repository to your local machine.
+* [Assignment 1](#assignment-1) - Edit an existing markdown file, create two new markdown files in this repository and experiment with different Markdown styles. Practice _commit, push, fetch, and pull_.
+* [Assignment 2](#assignment-2) - Create a new _branch_, add a NetLogo model to that branch, and push it to GitHub. Feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
-* [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://github.com/comses/winter-school-2022/discussions). What do
+* [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://comses.net/about/contact/). Was there anything confusing? What can we do better? Make suggestions or ask questions in your Winter School Repository's Discussions or Issues.
 
 ## Additional Resources 📚
 
