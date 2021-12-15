@@ -2,7 +2,7 @@
 
 ## 🤓 Course overview and learning outcomes 
 
-The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub, and is intended for people with little to no experience with either.
+The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either.
 
 ### Objectives
 
@@ -69,9 +69,11 @@ Whenever you are doing Git things (executing Git commands) you're using a Git cl
 
 When a repository is created on GitHub.com (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can **clone this repository** to create a local copy on your computer and then use Git to keep the two repositories synced. 
 
-This makes it easier to work on new features, fix bugs, and push larger commits that affect lots of files. When you **clone a repository**, downloading it to your local computer, you can use your favorite text editor as opposed to the GitHub UI to edit and modify these files (or a programming platform application like NetLogo).
+This makes it easier to work on new features, fix bugs, and push larger commits that affect lots of files. When you **clone a repository**, downloading it to your local computer, you can use your favorite text editor instead of the GitHub UI to edit and modify these files. Some popular text editors include [VS Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or in our case, programming platforms like NetLogo.
 
-Cloning a repository also pulls all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. This means you can switch to any version that was stored on GitHub at any point.
+Cloning a repository also pulls all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. This means you can switch to any version that was stored in Git at any point.
+
+It's very important to keep in mind the difference between **local** and **remote** repositories. Your **local** repositories are the ones you are directly interacting with, and your **remote** repositories are typically the ones on the cloud, e.g., GitHub.com or GitLab.com or bitbucket.org.
 
 To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
@@ -83,12 +85,14 @@ Please clone this repository now. In GitHub Desktop, access the menu options `Fi
 
 ![Clone this repository](images/github-desktop-clone.png)
 
+Take note of where your local Git repository is going to be saved, this is the `Local path` shown here:
+
+![Local repository path](images/github-desktop-local-repository-path.png)
+
 
 ### Commit and push
 
-**Commit** your work Git record the changes you've made to a file or collection of files.
-
-**Push**
+When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files.
 
 A `commit` is a data structure that keeps track of the set of changes that were made to the repository. What kinds of things do you think they need to keep track of? 
 
@@ -107,13 +111,21 @@ If I fix a bug, add a feature, change the way a function is implemented, AND ren
 
 Instead, make each of those things their own individual commit. When commits are a small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, sensible commits - you'll thank yourself later!
 
-### Assignment 1: your first commits
+Please note that when you commit your work **locally**, it doesn't automatically go back to your remote repository on GitHub.com. You'll need to **push** your work to GitHub.com or another remote repository for those commits to be added. If you performed the commit on GitHub.com though, there is no need to push - it started off there!
 
-You have three tasks in this assignment:
+### Fetch and Pull
 
-1. make changes to an existing file in this repository, `homework-submission.md`
-2. add a new file with the GitHub web interface, named `a1-github-web.md`
-3. add a new file to your local repository using GitHub Desktop named `a1-github-desktop.md`
+Fetch and pull are how you get changes from a remote repository back to a local repository.
+
+Fetch synchronizes the state of the `.git` magic metadata directory **without modifying the files in the actual repository directory**. For example, if you had `wolf-sheep.nlogo` in your local repository and someone made changes in the remote repository, a _fetch_ would not change the contents of `wolf-sheep.nlogo`. The contents of `wolf-sheep.nlogo` would only change when you _pull_ the changes into your local repository.
+
+### Assignment 1
+
+There are three tasks in this assignment:
+
+1. make changes to an existing file in this repository, `homework-edits.md`
+2. add a new file with the GitHub web interface, named `add-github-web.md`
+3. add a new file to your local repository using GitHub Desktop named `about.md`
 
 The contents of these files should be valid GitHub markdown - experiment with the syntax and feel free to add any text you like. Your files should have at least the following types of Markdown content (across all of the files):
 
@@ -124,7 +136,7 @@ The contents of these files should be valid GitHub markdown - experiment with th
 
 ### Using Markdown on GitHub 
 
-You might have noticed already, but you can add some fun styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs and images to help convey your ideas!
+You might have noticed already, but you can add styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs, images, and emojis to help convey your ideas!
 
 To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
 
@@ -134,7 +146,7 @@ First, let's make some changes to a file that already exists in this repository.
 
 1. locate `homework-edits.md` on your local filesystem
 2. open it in a text editor (e.g., Atom, VS Code)
-3. make some changes to the file using valid Markdown and save them
+3. make some changes to the file using valid Markdown and save them. Add a link to your work, write a poem. Feel free to be creative!
 
 #### Record the commit
 
@@ -150,10 +162,17 @@ The larger Description text box is the best place to include all relevant non-ob
 
 When you are finished with your commit log messages and double checked that only the files you want to commit are checked in the window, click the "Commit" button.
 
+Are these changes now visible on your repository at GitHub.com? Refresh the remote GitHub repository and see if the file is there.
+
+The answer is no - we only recorded this change on our **local** Git repository. Our remote repository on GitHub is still unchanged and will remain so until we **push** our changes to GitHub.
+
+![Github Desktop push](images/github-desktop-commit.png)
+
+Do that by clicking on the `Push origin` button shown here. Now when you refresh your GitHub repository you should see the changes there.
+
 #### Create a new file: GitHub Web Interface
 
 Create a new file through the GitHub web interface: https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files
-
 
 ### Interlude: Fetch and Pull
 
@@ -167,8 +186,7 @@ First, _fetch_ all changes from the **remote** GitHub repository by clicking thi
 
 ![Fetch origin](images/fetch-origin.png)
 
-Fetch doesn't change the state of your actual filesystem, it just grabs all the changes that were made and updates the magic `.git` directory.
-
+Fetch doesn't change the state of your actual filesystem, it just grabs all the changes that were made and updates the magic `.git` directory. You can verify this by going into your repository and check - is the file there?
 
 In order to apply those changes to our actual filesystem, we need to *pull* them. You should see something like this:
 
@@ -180,20 +198,19 @@ Remember to fetch and pull frequently, whenever you know there are remote change
 
 #### Create a new file: GitHub Desktop
 
-Create a new file named `a1-github-desktop.md` in your local repository folder. On Windows you can use the Repository menu item `Repository -> Show in Explorer` to go to your local repository folder. Once you've added some text to this file you will see it in your GitHub Desktop UI under the `Changes` tab. 
+Create a new file named `about.md` in your local repository folder. On Windows you can use the Repository menu item `Repository -> Show in Explorer` to go to your local repository folder. Once you've added some text to this file you will see it in your GitHub Desktop UI under the `Changes` tab. 
 
-Check or uncheck the checkboxes to mark which files are to be included in this commit so be sure that you are _only including the files you want to commit_. By default GitHub Desktop checks all new files it finds in the GitHub repository folder that it is currently managing, so you might need to uncheck them if you don't want them getting sent to your remote GitHub repository.
+Check or uncheck the checkboxes to mark which files are to be included in this commit so be sure that you are _only including the files you want to commit_. By default GitHub Desktop checks all new files it finds in the GitHub repository folder that it is currently managing, so you might need to uncheck them if you don't want them getting sent to your remote GitHub repository. 
 
 ![add new file](images/github-desktop-add-new-file.png)
 
-
 On the command line, this is a 2-phase process. First you **add** files to your commit, telling git that you want to keep track of these files, then you **commit** them, formally marking them as part of your commit and adding associating a commit log message with that _changeset_.
 
-After you've committed your changes you'll be able to **push** those commits to add them to the **remote** GitHub repository.
+After you've committed your changes the middle button in GitHub Desktop will change to `Push origin` and let you **push** your commits to the **remote** GitHub repository. Refresh your remote GitHub repository after you push and you'll see your changes there!
 
 ![GitHub Desktop push origin](images/github-desktop-push-origin.png)
 
-Summary: use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. Next we'll see how to **pull** changes on a remote repository into our local Git repository.
+Summary: use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. Use **fetch** and **pull** to grab changes from a remote repository so you can view your collaborators latest work.
 
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
