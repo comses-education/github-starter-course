@@ -241,9 +241,11 @@ You can create a branch in GitHub Desktop by clicking on the `Current branch` bu
 
 ![Create a branch](images/github-desktop-create-branch.png)
 
-Depending on the state of your local Git repository an additional dialog may pop up asking you if you want to `Leave my changes on ...` or `Bring my changes into ...`. This means you had uncommitted / unpushed changes in your local repository and GitHub Desktop wants to know what you want to do with those changes. Leaving the changes puts them into a **stash** where you can retrieve the changes later when you want them. Bringing the changes with you makes the new branch you are creating have the file changes right there to commit / push when you are ready.
+You'll need to name the branch and decide where it should be based on. If you were not on the default branch when you click the `New branch` button, you might get a different dialog asking you if you want to base the new branch off the default branch or the current branch you are on.
 
-![Switch branch dialog](images/github-desktop-switch-branch-dialog.png)
+![Name branch](images/github-desktop-create-branch-name.png)
+
+Depending on the state of your local Git repository an additional dialog may pop up asking you if you want to `Leave my changes on ...` or `Bring my changes into ...`. This means you had uncommitted / unpushed changes in your local repository and GitHub Desktop wants to know what you want to do with those changes. Leaving the changes puts them into a **stash** where you can retrieve the changes later when you want them. Bringing the changes with you makes the new branch you are creating have the file changes right there to commit / push when you are ready.
 
 When you are done creating the branch, you'll still need to **push** it to GitHub.com - click the Synchronize button that should now have the label `Publish branch`. This only appears if the branch does not already exist to GitHub, otherwise it'll be one of the usual `Fetch origin | Pull origin | Push origin` labels. 
 
@@ -255,13 +257,13 @@ Creating a branch on GitHub removes the need to `push` the changes to GitHub sin
 
 First, click on the `branch` button 
 
-![GitHub branch button](images/github-desktop-branch-button.png)
+![GitHub branch button](images/github-branch-button.png)
 
 Next, type the name of the branch you want to create and then click the `Create branch: <branchname>` link below it. 
 
 Make sure you are creating the branch based on the correct branch, most of the time this will be the default `main` branch, but sometimes you may want to branch off of someone else's branch. It's branches all the way down!
 
-![Create a branch](images/github-desktop-create-branch.png)
+![Create a branch](images/github-create-branch.png)
 
 Huzzah! Your branch is now created and live.
 
