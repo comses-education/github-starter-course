@@ -54,16 +54,16 @@ Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., store
 
 GitHub repositories can contain a **README** plain text file in Markdown format. Every directory managed in your Git / GitHub repository will display its README when you view that directory on GitHub - here are [some](https://github.com/comses/winter-school-2022/tree/main/projects) [examples](https://github.com/comses/winter-school-2022/tree/main/initial-tutorial).
 
-It's good practice to add a README file to your repository to tell other people why your project is useful, what they can do with your project, and how they can use it. We are using this README to communicate how to learn Git and GitHub with you. 😄 
+It's good practice to add a README file to your repository to explain why your project is useful, what others can do with your project, and how they can use it. This file is also a README to show how to learn Git and GitHub. 😄 It's READMEs all the way down.
 
 To learn more about repositories read ["Creating, Cloning, and Archiving Repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
 
 
 #### Advanced
 
-A cloned Git repository consists of all the files and directories you told Git to keep track of with an additional `.git` directory living at to the repository's root directory. This .git directory contains all of the magic Git book-keeping and metadata things that capture *which changes came from where, when, from whom, and why*. 
+A cloned Git repository has all the files and directories you told Git to track along with an additional `.git` directory living at to the repository's root directory. This .git directory contains all of the magic Git book-keeping and metadata things that capture *which changes came from where, when, from whom, and why*. 
 
-Whenever you are doing Git things (i.e., executing Git commands) you're using the `git` program to interact with the stuff inside the managed `.git` directory of a Git repository.
+Whenever you are doing Git things (executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory of a Git repository.
 
 ### Clone a repository
 
@@ -86,73 +86,146 @@ Please clone this repository now. In GitHub Desktop, access the menu options `Fi
 
 ### Commit and push
 
-**Commits** are how you tell Git you are ready to record the changes you've made to a file or collection of files. It's a good rule of thumb to keep commits small and self contained - a bug fix and a test that exposes the bug deserves a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
+**Commit** your work Git record the changes you've made to a file or collection of files.
 
-If I fix a bug, add a feature, change the way a function is implemented, and rename some variables all in the same commit, leading to changes across 20+ files, as you can imagine it gets a lot harder to pick out what was done where and why.
+**Push**
 
-Instead, make each of those things their own commit, representing one small, localized change.
+A `commit` is a data structure that keeps track of the set of changes that were made to the repository. What kinds of things do you think they need to keep track of? 
 
-A `commit` is a discrete data object with useful metadata about the set of changes that were made to the repository. What kinds of things do you think they need to keep track of? 
+1. the **changeset**: the set of files that were changed
+2. a **parent**: Every commit data object keeps track of its parent commit. What's the only commit in a Git repository that doesn't have a parent? 
+2. the **diffs**: the actual file-level differences between the files in the _changeset_ and what was in those files previously, in this commit's _parent_ commit 
+4. **provenance metadata**: a commit log message that you write to explain the commit, the git username and email of the commit's author, and more
+5. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository
+6. what else would you want to keep track of if you were a version control system?
 
-1. the set of files that were changed (called the _changeset_)
-2. Its "parent" commit. Every commit data object keeps track of its parent commit except the very first root commit initializing a Git repository
-3. the actual file level differences between the files in the _changeset_ and what was in those files previously, in this commit's "parent" commit
-4. provenance metadata: a commit log message that you write to explain the commit, the git username and email of the commit's author, and more
-5. a unique hash ID (you'll see these often on GitHub)
-6. What else you would keep track of if you were Git?
+#### Good practices for commits
 
-On the command line, this is a 2-phase process. First you **add** files to your commit, telling git that you want to keep track of these files, then you **commit** them, formally marking them as part of your commit and adding associating a commit log message with that _changeset_.
+It's a good rule of thumb to try and keep commits small and self contained - a bug fix and a test that exposes the bug deserves a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
 
-With GitHub Desktop, you'll click checkboxes on the files you want to commit (and remember to uncheck files you **don't** want to commit), enter a log summary and descriptive message to remind your future self and collaborators what you did and why and other relevant non-obvious details that would be difficult to glean from the code itself. Then click the "Commit" button.
+If I fix a bug, add a feature, change the way a function is implemented, AND rename some variables all in the same commit it makes it harder to identify what was done where and why.
+
+Instead, make each of those things their own individual commit. When commits are a small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, sensible commits - you'll thank yourself later!
+
+### Assignment 1: your first commits
+
+You have three tasks in this assignment:
+
+1. make changes to an existing file in this repository, `homework-submission.md`
+2. add a new file with the GitHub web interface, named `a1-github-web.md`
+3. add a new file to your local repository using GitHub Desktop named `a1-github-desktop.md`
+
+The contents of these files should be valid GitHub markdown - experiment with the syntax and feel free to add any text you like. Your files should have at least the following types of Markdown content (across all of the files):
+
+1. headers
+2. a numbered list
+3. a bulleted list
+4. at least one hyperlink / URL to a web resource (whatever you like, something interesting to share with the rest of the class, but nothing inappropriate please!)
+
+### Using Markdown on GitHub 
+
+You might have noticed already, but you can add some fun styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs and images to help convey your ideas!
+
+To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
+
+#### Edit an existing file
+
+First, let's make some changes to a file that already exists in this repository. You should have already cloned this repository in [assignment 0](#assignment-0). Let's make modifications to the file, `homework-edits.md`, in this repository.
+
+1. locate `homework-edits.md` on your local filesystem
+2. open it in a text editor (e.g., Atom, VS Code)
+3. make some changes to the file using valid Markdown and save them
+
+#### Record the commit
+
+After making changes to the files it's time to return to GitHub Desktop to commit these changes. 
 
 ![Github Desktop commit](images/github-desktop-commit.png)
+
+Enter a log summary and descriptive message to remind your future self and collaborators what you did and why.
+
+Your log summary message should be short and to the point, an executive summary of the changes you made and typically limited to 50 characters. They are typically recorded in a present tense, action verb oriented style, e.g., `fix overflow bug in random number generator`.
+
+The larger Description text box is the best place to include all relevant non-obvious details that would be difficult to glean from the code itself like an electronic lab notebook. It can be as long as needed.
+
+When you are finished with your commit log messages and double checked that only the files you want to commit are checked in the window, click the "Commit" button.
+
+#### Create a new file: GitHub Web Interface
+
+Create a new file through the GitHub web interface: https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files
+
+
+### Interlude: Fetch and Pull
+
+#### synchronize your local repository with the remote GitHub web repository 
+
+We just created a new file on our **remote** GitHub repository. But these changes do not exist on our local repository; GitHub Desktop is not like Dropbox and does not automatically synchronize.
+
+To bring our **remote** changes over to our **local** GitHub repository we'll need to _fetch_ and _pull_ those changes in GitHub Desktop.
+
+First, _fetch_ all changes from the **remote** GitHub repository by clicking this button on GitHub Desktop:
+
+![Fetch origin](images/fetch-origin.png)
+
+Fetch doesn't change the state of your actual filesystem, it just grabs all the changes that were made and updates the magic `.git` directory.
+
+
+In order to apply those changes to our actual filesystem, we need to *pull* them. You should see something like this:
+
+![Pull origin](images/pull-origin.png)
+
+Click on the `Pull origin` button to bring the new file that you *fetch*ed from your remote git repository into your local git repository into your active filesystem.
+
+Remember to fetch and pull frequently, whenever you know there are remote changes that you need to pull into your local repository. It's a good idea to do it before every coding session and sometimes during your coding sessions as you coordinate with your team.
+
+#### Create a new file: GitHub Desktop
+
+Create a new file named `a1-github-desktop.md` in your local repository folder. On Windows you can use the Repository menu item `Repository -> Show in Explorer` to go to your local repository folder. Once you've added some text to this file you will see it in your GitHub Desktop UI under the `Changes` tab. 
+
+Check or uncheck the checkboxes to mark which files are to be included in this commit so be sure that you are _only including the files you want to commit_. By default GitHub Desktop checks all new files it finds in the GitHub repository folder that it is currently managing, so you might need to uncheck them if you don't want them getting sent to your remote GitHub repository.
+
+![add new file](images/github-desktop-add-new-file.png)
+
+
+On the command line, this is a 2-phase process. First you **add** files to your commit, telling git that you want to keep track of these files, then you **commit** them, formally marking them as part of your commit and adding associating a commit log message with that _changeset_.
 
 After you've committed your changes you'll be able to **push** those commits to add them to the **remote** GitHub repository.
 
 ![GitHub Desktop push origin](images/github-desktop-push-origin.png)
 
-
-
-Summary: use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. They can also easily **pull** those changes into their local Git repositories to test them out or build on them.
-
-
-### Fetch and pull
-
-`Fetch`
-
-**Fetching** or **pulling** are how 
+Summary: use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. Next we'll see how to **pull** changes on a remote repository into our local Git repository.
 
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
 ### Branches
 You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically, you might create a new branch from the default branch of your repository—main. This makes a new working copy of your repository for you to experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository.
+
 To learn more about branching, read ["About Branches"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches).
 
 ### Forks
-A fork is another way to copy a repository, but is usually used when you want to contribute to someone else’s project. Forking a repository allows you to freely experiment with changes without affecting the original project and is very popular when contributing to open source software projects!
+A fork is another way to copy a repository, but is usually used when you want to contribute to someone else’s project. Forking a repository allows you to freely experiment with changes without affecting the original project and is a common way to contribute to open source software projects.
+
 To learn more about forking, read ["Fork a repo"](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)
 
 ### Pull requests
-When working with branches, you can use a pull request to tell others about the changes you want to make and ask for their feedback. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add more changes if need be. You can add specific people as reviewers of your pull request which shows you want their feedback on your changes! Once a pull request is ready-to-go, it can be merged into your main branch.
+When working with branches, you can use a pull request to tell others about the changes you want to make and ask for their feedback. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add more changes if need be. You can add specific people as reviewers of your pull request which shows you want their feedback on your changes. Once a pull request is ready-to-go, it can be merged into your main branch.
+
 To learn more about pull requests, read ["About Pull Requests"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
 
 
 ### Issues
-Issues are a way to track enhancements, tasks, or bugs for your work on GitHub. Issues are a great way to keep track of all the tasks you want to work on for your project and let others know what you plan to work on. You can also use issues to tell a favorite open source project about a bug you found or a feature you think would be great to add!
+Issues are a way to track enhancements, tasks, or bugs for your work on GitHub. Issues are a great way to keep track of all the tasks you want to work on for your project and let others know what you plan to work on. You can also use issues to tell a favorite open source project about a bug you found or a feature you think would be great to add.
 
-For larger projects, you can keep track of many issues on a project board. GitHub Projects help you organize and prioritize your work and you can read more about them [in this "About Project boards document](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards). You likely won’t need a project board for your assignments, but once you move on to even bigger projects, they’re a great way to organize your team’s work!
+For larger projects, you can keep track of many issues on a project board. GitHub Projects help you organize and prioritize your work and you can read more about them [in this "About Project boards document](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards). You likely won’t need a project board for your assignments, but once you move on to even bigger projects, they’re a great way to organize your team’s work.
+
 You can also link together pull requests and issues to show that a fix is in progress and to automatically close the issue when someone merges the pull request.
+
 To learn more about issues and linking them to your pull requests, read ["About Issues"](https://docs.github.com/en/github/managing-your-work-on-github/about-issues). 
 
 ### Your user profile
 
 Your profile page tells people the story of your work through the repositories you're interested in, the contributions you've made, and the conversations you've had. You can also give the world a unique view into who you are with your profile README. You can use your profile to let future employers know all about you! 
 To learn more about your user profile and adding and updating your profile README, read ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme). 
-
-### Using markdown on GitHub 
-
-You might have noticed already, but you can add some fun styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs and images to help convey your point!
-To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
 
 
 ### Beginners Git Workflow
@@ -194,18 +267,19 @@ https://docs.github.com/en/get-started/quickstart/github-flow
 
 ## Next Steps
 
-Complete the following assignments:
+Make sure you've complete the following assignments:
 
-* [Assignment 0](assignment-0.md) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client so you can synchronize the work on your local machine with GitHub. 
-* [Assignment 1](assignment-1.md) - Create a new markdown file in this repository named `documentation.md` and experiment with different Markdown styles. Feel free to let us know what you've learned, and what you are still confused about.
-* [Assignment 2](assignment-2.md) - Add a NetLogo file to this repository (feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers)
-* [Assignment 3](assignment-3.md) - Open a pull request and tag us via the `@` symbol, e.g., `@alee` to let us know that you’ve finished this course.
+* [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and clone this repository to your local machine.
+* [Assignment 1](#assignment-1) - Create a new markdown file in this repository named `documentation.md` and experiment with different Markdown styles. Feel free to let us know what you've learned, and what you are still confused about.
+* [Assignment 2](#assignment-2) - Create a new branch and add a NetLogo file to that branch (feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers)
+* [Assignment 3](#assignment-3) - Open a pull request and tag us via the `@` symbol, e.g., `@alee` to let us know that you’ve finished this course.
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
-* (Optional) Go to your user dashboard and create a new repository. Experiment with the features within that repository to familiarize yourself with them. 
-* [Let us know what you liked or didn’t like about the content of this course](https://support.github.com/contact/education). What would you like to see more of? What would be interesting or helpful to your learning journey? 
+* (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
+* [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://github.com/comses/winter-school-2022/discussions). What do
 
 ## Additional Resources 📚
-* [A short video explaining what GitHub is](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
+
+* [A short video explaining GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
 * [Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
 * [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 * [How to use GitHub branches](https://www.youtube.com/watch?v=H5GJfcp3p4Q&feature=youtu.be)
