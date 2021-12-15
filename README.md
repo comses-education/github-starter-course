@@ -215,7 +215,9 @@ Summary: use **commit** and **push** to share your changes with a remote reposit
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
 ### Branches
-You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically, you might create a new branch from the default branch of your repository—main. This makes a new working copy of your repository for you to experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository.
+You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically you will create a new branch from the default branch of your repository, usually called `main`. This makes a new working copy of your `main` branch that you can experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository. Or you can delete the branch if you decided it was a failed experiment.
+
+Key point: branches are always `based` on an existing branch, usually the default branch. A new branch carries all of the previous Git history of the branch it was based on and starts a new Git history from that point forward, kind of like a tree branch emerging from a tree trunk. Branches can and do evolve independently of each other, changes you make in a branch `islanders` are not going to be visible in changes made in a different branch `rangers` even though they may share some history together.
 
 To learn more about branching, read ["About Branches"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches).
 
@@ -229,7 +231,7 @@ When working with branches, you can use a pull request to tell others about the 
 
 To learn more about pull requests, read ["About Pull Requests"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
 
-### Assignment 3
+### Assignment 2
 
 Create a branch through GitHub Desktop and on the GitHub web interface. Name the branch you create in GitHub Desktop `gh-desktop` and the GitHub web branch `gh-web`. 
 
@@ -246,6 +248,22 @@ Depending on the state of your local Git repository an additional dialog may pop
 When you are done creating the branch, you'll still need to **push** it to GitHub.com - click the Synchronize button that should now have the label `Publish branch`. This only appears if the branch does not already exist to GitHub, otherwise it'll be one of the usual `Fetch origin | Pull origin | Push origin` labels. 
 
 After you publish the branch to GitHub the label should change back to `Fetch origin`.
+
+#### Branching in the GitHub web interface
+
+Creating a branch on GitHub removes the need to `push` the changes to GitHub since it's right there!
+
+First, click on the `branch` button 
+
+![GitHub branch button](images/github-desktop-branch-button.png)
+
+Next, type the name of the branch you want to create and then click the `Create branch: <branchname>` link below it. 
+
+Make sure you are creating the branch based on the correct branch, most of the time this will be the default `main` branch, but sometimes you may want to branch off of someone else's branch. It's branches all the way down!
+
+![Create a branch](images/github-desktop-create-branch.png)
+
+Huzzah! Your branch is now created and live.
 
 -----
 
