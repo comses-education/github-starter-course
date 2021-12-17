@@ -6,6 +6,8 @@ The goal of this course is to provide a quick but complete introduction to versi
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
+_from [XKCD](https://xkcd.com/1597/)_
+
 ### Objectives
 
 - develop a clear conceptual model that answers *What are version control systems and why should I use them? What is Git and how do I use it?*
