@@ -263,7 +263,7 @@ Huzzah! Your branch is now created and live.
 
 Now that you have created a new branch, please find a NetLogo model to add to this branch and add information about the model in a documentation file.
 
-You can find a model of your choice from the [Netlogo Modeling Commons](http://modelingcommons.org/) or from [the CoMSES Computational Model Library](https://www.comses.net/). Find a model that is related to your own interests! 
+You can find a model of your choice from the [Netlogo Modeling Commons](http://modelingcommons.org/) or from the [CoMSES.Net Computational Model Library](https://www.comses.net/). Find a model that is related to your own interests! 
 
 Once you have chosen and downloaded a Netlogo model, save the file to your local Github repository branch that you created.
 
@@ -333,7 +333,7 @@ Make sure you've completed the following assignments:
 
 * [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and _clone_ this repository to your local machine.
 * [Assignment 1](#assignment-1) - Edit an existing markdown file, create two new markdown files in this repository and experiment with different Markdown styles. Practice _commit, push, fetch, and pull_.
-* [Assignment 2](#assignment-2) - Create two new _branches_, add a NetLogo model and the corresponding documentation to one of them, and push everything to GitHub. Feel free to upload one from the Netlogo Modeling Commons](http://modelingcommons.org/) or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
+* [Assignment 2](#assignment-2) - Create two new _branches_, add a NetLogo model and the corresponding documentation to one of them, and push everything to GitHub. Feel free to upload one from the [Netlogo Modeling Commons](http://modelingcommons.org/) or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
 * [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://comses.net/about/contact/). Was there anything confusing? What can we do better? Make suggestions or ask questions in your Winter School Repository's Discussions or Issues.
