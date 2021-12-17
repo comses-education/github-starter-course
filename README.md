@@ -2,7 +2,9 @@
 
 ## 🤓 Course overview and learning outcomes 
 
-The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either.
+The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. This is an initial pilot of the course based on several years of teaching it to a live audience, so please let us know if there is anything we can do to improve!
+
+![this is git](https://imgs.xkcd.com/comics/git.png)
 
 ### Objectives
 
@@ -58,7 +60,6 @@ It's good practice to add a README file to your repository to explain why your p
 
 To learn more about repositories read ["Creating, Cloning, and Archiving Repositories"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
 
-
 #### Advanced
 
 A cloned Git repository has all the files and directories you told Git to track along with an additional `.git` directory living at to the repository's root directory. This .git directory contains all of the magic Git book-keeping and metadata things that capture:
@@ -96,13 +97,19 @@ Take note of where your local Git repository is going to be saved, this is the `
 
 ### Commit and push
 
-When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files.
+When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files. You'll often hear a phrase or something along the lines that a Git repository is "you know, just a Directed Acyclic Graph (DAG) of commit objects". So what does that all mean?
 
-A `commit` is a data structure that keeps track of the set of changes that were made to the repository. What kinds of things do you think they need to keep track of? 
+![Git DAG from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101](images/git-dag.png)
+
+_image from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101_
+
+This is a formal way of saying that Git is a graph (like your social network) representing the changes that have been made to a bunch of files and that these changes have a direction - they only go one way, like [time itself (at least as far as we can tell)](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a `commit object`.
+
+A `commit object` is a data structure that keeps track of a set of changes made to the Git repository. What kinds of things do you think a commit object needs to keep track of? 
 
 1. the **changeset**: the set of files that were changed
-2. a **parent**: Every commit data object keeps track of its parent commit. What's the only commit in a Git repository that doesn't have a parent? 
-2. the **diffs**: the actual file-level differences between the files in the _changeset_ and what was in those files previously, in this commit's _parent_ commit 
+2. a **parent**: Every commit data object keeps track of its parent commit(s). This is the _Directed_ part of the Directed Acyclic Graph. What's the only commit in a Git repository that doesn't have a parent? Are there any commits that can have more than one parent? (we'll go into multi-parent commits later when we cover merging)
+2. the **diffs**: the actual file-level differences between the files in the _changeset_ and the previous contents of those files in the commit's _parent_ commit 
 4. **provenance metadata**: a commit log message that you write to explain the commit, the git username and email of the commit's author, and more
 5. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository
 6. what else would you want to keep track of if you were a version control system?
