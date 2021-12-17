@@ -134,13 +134,13 @@ The contents of these files should be valid GitHub markdown - experiment with th
 3. a bulleted list
 4. at least one hyperlink / URL to a web resource (whatever you like, something interesting to share with the rest of the class, but nothing inappropriate please!)
 
-### Using Markdown on GitHub 
+#### Using Markdown on GitHub 
 
 You might have noticed already, but you can add styling to your issues, pull requests, and files. ["Markdown"](https://guides.github.com/features/mastering-markdown/) is an easy way to style your issues, pull requests, and files with some simple syntax. This can be helpful to organize your information and make it easier for others to read. You can also drop in gifs, images, and emojis to help convey your ideas!
 
 To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
 
-#### Edit an existing file
+#### 1. Edit an existing file
 
 First, let's make some changes to a file that already exists in this repository. You should have already cloned this repository in [assignment 0](#assignment-0). Let's make modifications to the file, `homework-edits.md`, in this repository.
 
@@ -148,9 +148,7 @@ First, let's make some changes to a file that already exists in this repository.
 2. open it in a text editor (e.g., Atom, VS Code)
 3. make some changes to the file using valid Markdown and save them. Add a link to your work, write a poem. Feel free to be creative!
 
-#### Record the commit
-
-After making changes to the files it's time to return to GitHub Desktop to commit these changes. 
+Now, record the commit. After making changes to the files it's time to return to GitHub Desktop to commit these changes. 
 
 ![Github Desktop commit](images/github-desktop-commit.png)
 
@@ -170,13 +168,9 @@ The answer is no - we only recorded this change on our **local** Git repository.
 
 Do that by clicking on the `Push origin` button shown here. Now when you refresh your GitHub repository you should see the changes there.
 
-#### Create a new file: GitHub Web Interface
+#### 2. Create a new file: GitHub Web Interface
 
-Create a new file through the GitHub web interface: https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files
-
-### Interlude: Fetch and Pull
-
-#### synchronize your local repository with the remote GitHub web repository 
+Create a new file named `add-github-web.md` through the GitHub web interface following [these instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files).
 
 We just created a new file on our **remote** GitHub repository. But these changes do not exist on our local repository; GitHub Desktop is not like Dropbox and does not automatically synchronize.
 
@@ -196,7 +190,7 @@ Click on the `Pull origin` button to bring the new file that you *fetch*ed from 
 
 Remember to fetch and pull frequently, whenever you know there are remote changes that you need to pull into your local repository. It's a good idea to do it before every coding session and sometimes during your coding sessions as you coordinate with your team.
 
-#### Create a new file: GitHub Desktop
+#### 3. Create a new file: GitHub Desktop
 
 Create a new file named `about.md` in your local repository folder. On Windows you can use the Repository menu item `Repository -> Show in Explorer` to go to your local repository folder. Once you've added some text to this file you will see it in your GitHub Desktop UI under the `Changes` tab. 
 
@@ -204,9 +198,9 @@ Check or uncheck the checkboxes to mark which files are to be included in this c
 
 ![add new file](images/github-desktop-add-new-file.png)
 
-On the command line, this is a 2-phase process. First you **add** files to your commit, telling git that you want to keep track of these files, then you **commit** them, formally marking them as part of your commit and adding associating a commit log message with that _changeset_.
+On the command line, this is a 2-phase process. First you **add** files to your commit, telling git that you want to keep track of these files, then you **commit** them, formally marking them as part of your commit and associating a commit log message with that _changeset_.
 
-After you've committed your changes the middle button in GitHub Desktop will change to `Push origin` and let you **push** your commits to the **remote** GitHub repository. Refresh your remote GitHub repository after you push and you'll see your changes there!
+After you've committed your changes, the middle button in GitHub Desktop will change to `Push origin` and let you **push** your commits to the **remote** GitHub repository. Refresh your remote GitHub repository after you push and you'll see your changes there!
 
 ![GitHub Desktop push origin](images/github-desktop-push-origin.png)
 
@@ -215,9 +209,9 @@ Summary: use **commit** and **push** to share your changes with a remote reposit
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
 ### Branches
-You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically you will create a new branch from the default branch of your repository, usually called `main`. This makes a new working copy of your `main` branch that you can experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository. Or you can delete the branch if you decided it was a failed experiment.
+You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically you will create a new branch from the default branch of your repository, which is usually called `main`. This makes a new working copy of your `main` branch that you can experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository. Or you can delete the branch if you decided it was a failed experiment.
 
-Key point: branches are always `based` on an existing branch, usually the default branch. A new branch carries all of the previous Git history of the branch it was based on and starts a new Git history from that point forward, kind of like a tree branch emerging from a tree trunk. Branches can and do evolve independently of each other, changes you make in a branch `islanders` are not going to be visible in changes made in a different branch `rangers` even though they may share some history together.
+Key point: branches are always `based` on an existing branch, usually the default branch. A new branch carries all of the previous Git history of the branch it was based on and starts a new Git history from that point forward, kind of like a tree branch emerging from a tree trunk. Branches can and do evolve independently of each other. Changes you make in a branch `islanders` are not going to be visible in changes made in a different branch `rangers` even though they may share some history together.
 
 To learn more about branching, read ["About Branches"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches).
 
@@ -237,7 +231,7 @@ Create a branch through GitHub Desktop and on the GitHub web interface. Name the
 
 #### Branching in GitHub Desktop 
 
-You can create a branch in GitHub Desktop by clicking on the `Current branch` button in the middle between the `Current repository` and the `Fetch origin` / `Pull origin` / `Push origin` button (we'll call that rightmost button the `synchronize` button from now on`).
+You can create a branch in GitHub Desktop by clicking on the `Current branch` button in the middle between the `Current repository` and the `Fetch origin` / `Pull origin` / `Push origin` button (we'll call that rightmost button the `Synchronize` button from now on).
 
 ![Create a branch](images/github-desktop-create-branch.png)
 
@@ -247,7 +241,7 @@ You'll need to name the branch and decide where it should be based on. If you we
 
 Depending on the state of your local Git repository an additional dialog may pop up asking you if you want to `Leave my changes on ...` or `Bring my changes into ...`. This means you had uncommitted / unpushed changes in your local repository and GitHub Desktop wants to know what you want to do with those changes. Leaving the changes puts them into a **stash** where you can retrieve the changes later when you want them. Bringing the changes with you makes the new branch you are creating have the file changes right there to commit / push when you are ready.
 
-When you are done creating the branch, you'll still need to **push** it to GitHub.com - click the Synchronize button that should now have the label `Publish branch`. This only appears if the branch does not already exist to GitHub, otherwise it'll be one of the usual `Fetch origin | Pull origin | Push origin` labels. 
+When you are done creating the branch, you'll still need to **push** it to GitHub.com - click the `Synchronize` button that should now have the label `Publish branch`. This only appears if the branch does not already exist to GitHub, otherwise it'll be one of the usual `Fetch origin` / `Pull origin` / `Push origin` labels. 
 
 After you publish the branch to GitHub the label should change back to `Fetch origin`.
 
@@ -261,7 +255,7 @@ First, click on the `branch` button
 
 Next, type the name of the branch you want to create and then click the `Create branch: <branchname>` link below it. 
 
-Make sure you are creating the branch based on the correct branch, most of the time this will be the default `main` branch, but sometimes you may want to branch off of someone else's branch. It's branches all the way down!
+Make sure you are creating the branch based on the correct branch. Most of the time this will be the default `main` branch, but sometimes you may want to branch off of someone else's branch. It's branches all the way down!
 
 ![Create a branch](images/github-create-branch.png)
 
@@ -286,7 +280,7 @@ You should now have a NetLogo model and a documentation file in your repository.
 ### Issues
 Issues are a way to track enhancements, tasks, or bugs for your work on GitHub. Issues are a great way to keep track of all the tasks you want to work on for your project and let others know what you plan to work on. You can also use issues to tell a favorite open source project about a bug you found or a feature you think would be great to add.
 
-For larger projects, you can keep track of many issues on a project board. GitHub Projects help you organize and prioritize your work and you can read more about them [in this "About Project boards document](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards). You likely won’t need a project board for your assignments, but once you move on to even bigger projects, they’re a great way to organize your team’s work.
+For larger projects, you can keep track of many issues on a project board. GitHub Projects help you organize and prioritize your work and you can read more about them [in this "About Project Boards" document](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards). You likely won’t need a project board for your assignments, but once you move on to even bigger projects, they’re a great way to organize your team’s work.
 
 You can also link together pull requests and issues to show that a fix is in progress and to automatically close the issue when someone merges the pull request.
 
@@ -332,16 +326,16 @@ https://docs.github.com/en/get-started/quickstart/github-flow
    things, but is still a good habit to keep.
 3. **Write meaningful log messages** that clearly document the intent of your change(s) and any thorny assumptions. Commit log messages are notes to your
    peers as well as your future self and future collaborators.
-4. **Use tags and releases** to keep track of important coding milestones. Did this exact version of your computational model pass all of its tests and generate harrowing data that lead to publishable findings? Make sure it's fully synced with your GitHub repository (e.g., **commit** and **push** any available changes), then create a [release, tag, and DOI](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) that points at this version.
+4. **Use tags and releases** to keep track of important coding milestones. Did this exact version of your computational model pass all of its tests and generate harrowing data that lead to publishable findings? Make sure it's fully synced with your GitHub repository (i.e., **commit** and **push** any available changes), then create a [release, tag, and DOI](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) that points at this version.
 
 
 ## Next Steps
 
-Make sure you've complete the following assignments:
+Make sure you've completed the following assignments:
 
 * [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and _clone_ this repository to your local machine.
 * [Assignment 1](#assignment-1) - Edit an existing markdown file, create two new markdown files in this repository and experiment with different Markdown styles. Practice _commit, push, fetch, and pull_.
-* [Assignment 2](#assignment-2) - Create a new _branch_, add a NetLogo model to that branch, and push it to GitHub. Feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
+* [Assignment 2](#assignment-2) - Create two new _branches_, add a NetLogo model and its documentation to one of them, and push everything to GitHub. Feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
 * [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://comses.net/about/contact/). Was there anything confusing? What can we do better? Make suggestions or ask questions in your Winter School Repository's Discussions or Issues.
