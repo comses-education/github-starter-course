@@ -215,7 +215,15 @@ After you've committed your changes, the middle button in GitHub Desktop will ch
 
 ![GitHub Desktop push origin](images/github-desktop-push-origin.png)
 
-Summary: use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. Use **fetch** and **pull** to grab changes from a remote repository so you can view your collaborators latest work.
+#### Task 4. View your commit history
+
+Let's take a look at what our commit history looks like on GitHub. Go back to your **remote repository** on GitHub, click on the `< > Code` tab, and click on the `commits` link at the top right of the little table next to the repository:
+
+![View commits on GitHub](images/view-commits.png)
+
+#### Summary: tl;dr;ddaw
+
+Use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. Use **fetch** and **pull** to grab changes from a remote repository so you can view your collaborators latest work.
 
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
@@ -274,7 +282,7 @@ Instead, manually delete the `<<<<<`, `=====`, and `>>>>>>` lines and integrate 
 
 ![GitHub Desktop Merge resolved](images/github-desktop-conflict-resolved.png)
 
-Go ahead and click the `Continue merge` button, and then **push** your changes back to the origin (our **remote** repository on GitHub). Now if you return to GitHub in your browser and [view your commits](/commits/main) you should see something like this:
+Go ahead and click the `Continue merge` button, and then **push** your changes back to the origin (our **remote** repository on GitHub). Now if you return to GitHub in your browser and view your commit history you should see something like this:
 
 ![GitHub merge commit](images/github-merge-commit.png)
 
