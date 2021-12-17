@@ -8,7 +8,7 @@ The goal of this course is to provide a quick but complete introduction to versi
 
 - develop a clear conceptual model that answers *What are version control systems and why should I use them? What is Git and how do I use it?*
 - become more familiar with the GitHub web interface to edit files, clone and fork repositories, manage branches and pull requests
-- practice simple git workflows and become more familiar with git GUI clients (e.g., GitHub Desktop or IDEs (Integrated Development Environments) like VS Code) to interact with your local and remote Git repositories
+- practice simple git workflows and become more familiar with git GUI clients e.g. [GitHub Desktop](https://desktop.github.com) or Integrated Development Environments (IDEs) like [VS Code](https://code.visualstudio.com) | [Atom](https://atom.io/) to interact with your local and remote Git repositories
 
 If these are too simple for you, great! We also have [links to more advanced resources](#additional-resources-) that we've found useful over the years. 🚀
 
@@ -16,13 +16,13 @@ If these are too simple for you, great! We also have [links to more advanced res
 
 Git is a **distributed Version Control System (VCS)**.
 
-A **version control system** is a software tool that helps you track changes to a set of files. These can be any kinds of files: images, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, Word documents, PDFs, etc. 
+A **version control system** is a software tool that helps you track changes to a set of files. These can be any kinds of files: images, movies, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, Word documents, PDFs, etc. 
 
-First, you tell the version control system which files you want to keep track of: this NetLogo model, and this README describing it. This is the first version of the file. Whenever you make subsequent changes to a tracked file, you can tell the version control system, _"Hey! Keep track of the current state of this file."_ and it will efficiently store the difference between the current state of the file and state of the file the last time you asked the version control system, _"Hey! Keep track of the current state of this file."_
+First, you tell the version control system which files you want to keep track of: for example, a NetLogo model, `boids.nlogo` and a `README.md` file describing and documenting it. This is the _initial_ version of your files. Whenever you make subsequent changes to your tracked file(s), you can then tell the version control system, _"Hey! Keep track of the current state of this file now."_ and it will efficiently store the difference between the current state of the file and state of the file the last time you asked the version control system, _"Hey! Keep track of the current state of this file."_ which could be the _initial_ version or some subsequent version. For simplicity we can think of it as v1, v2, v3, v4, etc.
 
-Most of the time we keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary formats in Git as well like images, zipfiles, or other binary data. 
+Most of the time we want to keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary formats in Git as well like images, zipfiles, or other binary data.
 
-**You should avoid** putting *generated* artifacts into Git like compiled executables (e.g. Windows .exe or macOS application bundle), or compiled C code / Java `.class` files though. These artifacts are *derivatives* and change when the source code changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. So instead of committing the hauntingly evocative figure you generated for your publication, commit the code and permanent references to the input datasets needed to generate that hauntingly evocative figure.
+However, **you should avoid** putting *generated* artifacts into Git like compiled executables (e.g. Windows .exe or macOS application bundle), or compiled C code / Java `.class` files. These artifacts are *derivatives* and change when the source code changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. So instead of committing the hauntingly evocative figure you generated for your publication, commit the code and permanent references to the input datasets needed to generate that hauntingly evocative figure.
 
 ### Why do we need version control systems?
 
@@ -48,7 +48,7 @@ Let's start by defining some common terms you'll find in Git and GitHub.
 
 ### Repositories
 
-A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone](#clone-a-repository), which downloads a local copy of the Git repository to wherever you issued the `clone` request.
+A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone](#clone-a-repository), which downloads a local copy of the Git repository to the computer where you issued the `clone` request.
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️  on GitHub, GitLab, BitBucket, etc).
 
@@ -61,9 +61,14 @@ To learn more about repositories read ["Creating, Cloning, and Archiving Reposit
 
 #### Advanced
 
-A cloned Git repository has all the files and directories you told Git to track along with an additional `.git` directory living at to the repository's root directory. This .git directory contains all of the magic Git book-keeping and metadata things that capture *which changes came from where, when, from whom, and why*. 
+A cloned Git repository has all the files and directories you told Git to track along with an additional `.git` directory living at to the repository's root directory. This .git directory contains all of the magic Git book-keeping and metadata things that capture:
 
-Whenever you are doing Git things (executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory of a Git repository.
+1. which actual file level changes occurred to the files
+2. when were the changes recorded?
+3. who recorded the changes
+4. why were the changes made _(these last two parts you have to fill in yourself, Git's not THAT smart!)_
+
+Whenever you are doing Git things (executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory that makes a folder a Git repository.
 
 ### Clone a repository
 
@@ -89,7 +94,6 @@ Take note of where your local Git repository is going to be saved, this is the `
 
 ![Local repository path](images/github-desktop-local-repository-path.png)
 
-
 ### Commit and push
 
 When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files.
@@ -107,17 +111,17 @@ A `commit` is a data structure that keeps track of the set of changes that were 
 
 It's a good rule of thumb to try and keep commits small and self contained - a bug fix and a test that exposes the bug deserves a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
 
-If I fix a bug, add a feature, change the way a function is implemented, AND rename some variables all in the same commit it makes it harder to identify what was done where and why.
+If I fix a bug, add a feature, change the way a function is implemented, AND rename some variables all in the same commit it makes it harder to identify what was done where and why. Furthermore, if I made a mistake in any of those changes or change my mind about how I wanted to rename that variable, Git can no longer help me easily revert those changes - I have to revert all of them or manually apply the next set of changes.
 
-Instead, make each of those things their own individual commit. When commits are small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, sensible commits - you'll thank yourself later!
+Instead, make each of those tasks their own individual commit. When commits are small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, self-contained, and semantically sensible commits - you'll thank yourself later!
 
-Please note that when you commit your work **locally**, it doesn't automatically go back to your remote repository on GitHub.com. You'll need to **push** your work to GitHub.com or another remote repository for those commits to be added. If you performed the commit on GitHub.com though, there is no need to push - it started off there!
+Please note that when you commit your work **locally**, it doesn't automatically go to your remote repository on GitHub.com. You'll need to **push** your work to GitHub.com or another remote repository for those commits to be added. If you performed the commit on GitHub.com though, there is no need to push - it started off there!
 
 ### Fetch and Pull
 
-Fetch and pull are how you get changes from a remote repository back to a local repository.
+Fetch and pull are how you synchronize changes between two repositories - in our case, we're usually thinking about how to grab changes from a remote repository and apply them to our local repository to make it up-to-date.
 
-Fetch synchronizes the state of the `.git` magic metadata directory **without modifying the files in the actual repository directory**. For example, if you had `wolf-sheep.nlogo` in your local repository and someone made changes in the remote repository, a _fetch_ would not change the contents of `wolf-sheep.nlogo`. The contents of `wolf-sheep.nlogo` would only change when you _pull_ the changes into your local repository.
+Fetch synchronizes the state of the `.git` magic metadata directory **without modifying the actual files in the repository directory**. For example, let's say that we had cloned our repository with our `boids.nlogo` NetLogo model in it 7 days ago and then went on vacation. While on vacation, our hard-working and reliable collaborators made lots of changes to the `boids.nlogo` model, adding all kinds of new features and fixing bugs, etc. To get their changes into our local 7 days old repository, we would first issue a _fetch_ but this won't actually change that `boids.nlogo` file just yet. The contents of `boids.nlogo` will only change when you tell Git to _pull_ the changes into your local repository.
 
 ### Assignment 1
 
