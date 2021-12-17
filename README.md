@@ -306,9 +306,7 @@ repository and synchronize that with GitHub.
 
 ### Advanced
 
-The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work. It uses Pull Requests and branches to manage incoming changes and is better suited to larger scale collaborative development where you have many people working in tandem on code.
-
-https://docs.github.com/en/get-started/quickstart/github-flow
+The [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work. It uses Pull Requests and branches to manage incoming changes and is better suited to larger scale collaborative development where you have many people working in tandem on code.
 
 ## General Git Guidelines
 
