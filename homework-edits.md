@@ -12,6 +12,9 @@ Make markdown modifications to this file below this line! Feel free to add anyth
 
 Your changes go here!
 
+
+Please don't edit anything in the section below though, we want to save that for Assignment 2. Thanks!
+
 ## Assignment 2: Placeholder section for CONFLICT RESOLUTION (Assignment 2)
 
 Please don't edit this section until you get to Assignment 2 of the GitHub classroom.
