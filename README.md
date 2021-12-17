@@ -129,10 +129,10 @@ There are three tasks in this assignment:
 
 The contents of these files should be valid GitHub markdown - experiment with the syntax and feel free to add any text you like. Your files should have at least the following types of Markdown content (across all of the files):
 
-1. headers
-2. a numbered list
-3. a bulleted list
-4. at least one hyperlink / URL to a web resource (whatever you like, something interesting to share with the rest of the class, but nothing inappropriate please!)
+* headers
+* a numbered list
+* a bulleted list
+* at least one hyperlink / URL to a web resource (whatever you like, something interesting to share with the rest of the class, but nothing inappropriate please!)
 
 #### Using Markdown on GitHub 
 
@@ -140,7 +140,7 @@ You might have noticed already, but you can add styling to your issues, pull req
 
 To learn more about using GitHub’s flavor of markdown, read ["Basic Writing and Formatting Syntax"](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax). 
 
-#### 1. Edit an existing file
+#### Task 1. Edit an existing file
 
 First, let's make some changes to a file that already exists in this repository. You should have already cloned this repository in [assignment 0](#assignment-0). Let's make modifications to the file, `homework-edits.md`, in this repository.
 
@@ -168,7 +168,7 @@ The answer is no - we only recorded this change on our **local** Git repository.
 
 Do that by clicking on the `Push origin` button shown here. Now when you refresh your GitHub repository you should see the changes there.
 
-#### 2. Create a new file: GitHub Web Interface
+#### Task 2. Create a new file: GitHub Web Interface
 
 Create a new file named `add-github-web.md` through the GitHub web interface following [these instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files).
 
@@ -190,7 +190,7 @@ Click on the `Pull origin` button to bring the new file that you *fetch*ed from 
 
 Remember to fetch and pull frequently, whenever you know there are remote changes that you need to pull into your local repository. It's a good idea to do it before every coding session and sometimes during your coding sessions as you coordinate with your team.
 
-#### 3. Create a new file: GitHub Desktop
+#### Task 3. Create a new file: GitHub Desktop
 
 Create a new file named `about.md` in your local repository folder. On Windows you can use the Repository menu item `Repository -> Show in Explorer` to go to your local repository folder. Once you've added some text to this file you will see it in your GitHub Desktop UI under the `Changes` tab. 
 
@@ -261,11 +261,9 @@ Make sure you are creating the branch based on the correct branch. Most of the t
 
 Huzzah! Your branch is now created and live.
 
------
-
 Now that you have created a new branch, please find a NetLogo model to add to this branch and add information about the model in a documentation file.
 
-You can find a model of your choice from The [Netlogo Modeling Commons] (http://modelingcommons.org/) or from [the CoMSES Computational Model Library] (https://www.comses.net/). Find a model that is related to your own interests! 
+You can find a model of your choice from the [Netlogo Modeling Commons](http://modelingcommons.org/) or from [the CoMSES Computational Model Library](https://www.comses.net/). Find a model that is related to your own interests! 
 
 Once you have chosen and downloaded a Netlogo model, save the file to your local Github repository branch that you created.
 
@@ -335,7 +333,7 @@ Make sure you've completed the following assignments:
 
 * [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and _clone_ this repository to your local machine.
 * [Assignment 1](#assignment-1) - Edit an existing markdown file, create two new markdown files in this repository and experiment with different Markdown styles. Practice _commit, push, fetch, and pull_.
-* [Assignment 2](#assignment-2) - Create two new _branches_, add a NetLogo model and its documentation to one of them, and push everything to GitHub. Feel free to upload one from the NetLogo model commons, e.g., https://ccl.northwestern.edu/netlogo/models/DiningPhilosophers or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
+* [Assignment 2](#assignment-2) - Create two new _branches_, add a NetLogo model and the corresponding documentation to one of them, and push everything to GitHub. Feel free to upload one from the Netlogo Modeling Commons](http://modelingcommons.org/) or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
 * [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://comses.net/about/contact/). Was there anything confusing? What can we do better? Make suggestions or ask questions in your Winter School Repository's Discussions or Issues.
