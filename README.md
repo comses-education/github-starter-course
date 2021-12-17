@@ -312,7 +312,7 @@ repository and synchronize that with GitHub.
 3. Commit your changes selectively and include meaningful log messages
 4. Push them to your hosted repository on GitHub.com
 
-## Advanced
+### Advanced
 
 The GitHub flow is a lightweight workflow that allows you to experiment and collaborate on your projects easily, without the risk of losing your previous work. It uses Pull Requests and branches to manage incoming changes and is better suited to larger scale collaborative development where you have many people working in tandem on code.
 
