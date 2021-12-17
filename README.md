@@ -2,7 +2,9 @@
 
 ## 🤓 Course overview and learning outcomes 
 
-The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. This is an initial pilot of the course based on several years of teaching it to a live audience, so please let us know if there is anything we can do to improve!
+The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. 
+
+There's no need to complete all of this at one sitting, and if you do happen to keep track of how much time it takes for you to go through this tutorial, please let us know in the Winter School Discussions section on GitHub. This is an initial pilot of the course based on several years of teaching it to a live audience, so please let us know if there is anything we can do to improve!
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
