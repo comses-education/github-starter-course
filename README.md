@@ -136,11 +136,12 @@ Fetch synchronizes the state of the `.git` magic metadata directory **without mo
 
 ### Assignment 1
 
-We will complete three tasks in this assignment:
+We will complete four tasks in this assignment:
 
 1. make changes to an existing file in this repository, `homework-edits.md`
 2. add a new file with the GitHub web interface, named `add-github-web.md`
 3. add a new file to your local repository using GitHub Desktop named `about.md`
+4. view your commit history on GitHub after making these changes to make sense of your repository
 
 The contents of these files should be valid GitHub markdown - experiment with the syntax and feel free to add any text you like. Your files should have at least the following types of Markdown content (across all of the files):
 
@@ -225,7 +226,9 @@ Let's take a look at what our commit history looks like on GitHub. Go back to yo
 
 ![View commits on GitHub](images/view-commits.png)
 
-#### Summary: tl;dr;ddaw
+Click through each of the commits there and you should see all the changes that happened within that commit. The commit history is **extremely useful** for understanding what happened in a codebase.
+
+### Summary: tl;dr;ddaw
 
 Use **commit** and **push** to share your changes with a remote repository so your teammates and collaborators can see your latest work. Use **fetch** and **pull** to grab changes from a remote repository so you can view your collaborators latest work.
 
@@ -233,9 +236,11 @@ Use **commit** and **push** to share your changes with a remote repository so yo
 
 ### Conflicts
 
-So far we've handled mostly linear changes where all **commits** and **pushes** were performed on two fully synchronized local and remote repositories. But what happens if you make a change to a file, commit that change, and at the same exact time (or close to it), your collaborator Alice commits and pushes their changes to the same file? There's two answers to this.
+So far we've handled mostly linear changes where all **commits** and **pushes** were performed on two fully synchronized local and remote repositories. But what happens if you make a change to a file, commit that change, and at the same exact time (or close to it), your collaborator Alice commits and pushes their changes to the same file? There's two scenarios we'll cover here.
 
-The first is that if Alice made changes to an unrelated area of the same file that you made changes to, Git is smart enough to notice that and will happily merge them together with a _merge commit_. For example, if you only changed some text in line 5 of `boids.nlogo` and Alice only changed some text in line 37-42 of `boids.nlogo`, Git will zip those changes together without asking you for input. However, if you changed text in line 5 of `boids.nlogo` AND changed text in lines 39-41 of `boids.nlogo`, well we have a problem! Which changes should Git keep? It doesn't know, and will ask you to figure it out and tell it what to do using a standard "conflict" format that looks something like this (pulled shamelessly from Atlassian's excellent Git tutorial at https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts):
+If Alice made changes to an unrelated area of the same file that you made changes to, Git is smart enough to notice that these changes are _independent_ of each other and will happily combine them with a _merge commit_. For example, if you only changed line 5 of `boids.nlogo` and Alice only changed lines 37-42 of `boids.nlogo`, Git will zip those changes together without asking you for input.
+
+However, if you changed text in line 5 of `boids.nlogo` AND changed text in lines 39-41 of `boids.nlogo` while Alice also changed lines 37-42, well we have a problem! Which changes should Git keep? Git doesn't know, and will ask you to figure it out and tell it what to do using a standard "conflict" format that looks something like this (pulled shamelessly from Atlassian's excellent Git tutorial at https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts):
 
 ```
 <<<<<<< HEAD
@@ -256,11 +261,13 @@ We can see some strange new additions
 
 Think of these new lines as "conflict dividers". The `=======` line is the "center" of the conflict. All the content between the  `<<<<<<< HEAD` line and the center line is content that exists in your **local** repository - usually this is YOUR stuff, your changes. All the content between the center `========` and `>>>>>>> b781b6b8a51e03e2b5a3d5cfef25fd9567cef53e` is content that is present in the **remote repository**, the changes that you want to bring in.
 
-If you try to push your change to GitHub, GitHub will refuse and tell you that you have encountered a merge conflict. So let's set that up for ourselves and see how to resolve them!
+If you have multiple conflicts, you may have multiple conflict sections like this in multiple files, they will all start with `<<<<<<< HEAD` and end in a `>>>>>> a-very-long-hash-or-maybe-a-branch-name-but-we-havent-learned-about-branches-yet`. You should make sure you've resolved ALL conflicts before committing and pushing your work back up to your remote GitHub repository.
+
+As it stands, if we have local conflicts to resolve and we try to push our changes to GitHub, GitHub will refuse and tell you that you have encountered a merge conflict. So let's set that up for ourselves and see how to resolve them.
 
 #### Assignment 2
 
-In order to generate a merge conflict by ourselves we'll do something similar to assignment 1, where we edit and commit a file in the GitHub web interface, and edit and commit a file in our local repository using GitHub Desktop. The difference is that we will NOT synchronize the local repository using _fetch_ and _pull_ before committing in GitHub Desktop.
+In order to generate a merge conflict by ourselves we'll do something similar to Assignment 1, where we edit and commit a file in the GitHub web interface, and edit and commit the same file in our local repository using GitHub Desktop. The difference is that we will NOT synchronize the local repository using _fetch_ and _pull_ before committing in GitHub Desktop.
 
 To learn how to edit a file in the GitHub web interface, please [read here](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
 
