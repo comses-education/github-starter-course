@@ -121,7 +121,7 @@ Fetch synchronizes the state of the `.git` magic metadata directory **without mo
 
 ### Assignment 1
 
-There are three tasks in this assignment:
+We will complete three tasks in this assignment:
 
 1. make changes to an existing file in this repository, `homework-edits.md`
 2. add a new file with the GitHub web interface, named `add-github-web.md`
