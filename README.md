@@ -109,7 +109,7 @@ It's a good rule of thumb to try and keep commits small and self contained - a b
 
 If I fix a bug, add a feature, change the way a function is implemented, AND rename some variables all in the same commit it makes it harder to identify what was done where and why.
 
-Instead, make each of those things their own individual commit. When commits are a small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, sensible commits - you'll thank yourself later!
+Instead, make each of those things their own individual commit. When commits are small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, sensible commits - you'll thank yourself later!
 
 Please note that when you commit your work **locally**, it doesn't automatically go back to your remote repository on GitHub.com. You'll need to **push** your work to GitHub.com or another remote repository for those commits to be added. If you performed the commit on GitHub.com though, there is no need to push - it started off there!
 
@@ -166,7 +166,7 @@ Are these changes now visible on your repository at GitHub.com? Refresh the remo
 
 The answer is no - we only recorded this change on our **local** Git repository. Our remote repository on GitHub is still unchanged and will remain so until we **push** our changes to GitHub.
 
-![Github Desktop push](images/github-desktop-commit.png)
+![Github Desktop push](images/github-desktop-push-origin.png)
 
 Do that by clicking on the `Push origin` button shown here. Now when you refresh your GitHub repository you should see the changes there.
 
