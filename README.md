@@ -79,7 +79,7 @@ To learn more about cloning, read ["Cloning a Repository"](https://docs.github.c
 
 ### Assignment 0
 
-Please clone this repository now. In GitHub Desktop, access the menu options `File -> Clone` repository (or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> on Windows) and enter the URL from the Code button - it should be something like `https://github.com/comses/learn-git-<your-github-username>`
+Please clone this repository now. In [GitHub Desktop](https://desktop.github.com), access the menu options `File -> Clone` repository (or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> on Windows) and enter the URL from the Code button - it should be something like `https://github.com/comses/learn-git-<your-github-username>`
 
 ![Git repository clone URL](images/git-clone.png)
 
