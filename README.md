@@ -274,7 +274,7 @@ Instead, manually delete the `<<<<<`, `=====`, and `>>>>>>` lines and integrate 
 
 ![GitHub Desktop Merge resolved](images/github-desktop-conflict-resolved.png)
 
-Go ahead and click the `Continue merge` button, and then **push** your changes back to the origin (our **remote** repository on GitHub). Now if you return to GitHub in your browser and [view your commits](commits/main) you should see something like this:
+Go ahead and click the `Continue merge` button, and then **push** your changes back to the origin (our **remote** repository on GitHub). Now if you return to GitHub in your browser and [view your commits](/commits/main) you should see something like this:
 
 ![GitHub merge commit](images/github-merge-commit.png)
 
