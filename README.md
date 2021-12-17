@@ -97,18 +97,18 @@ Take note of where your local Git repository is going to be saved, this is the `
 
 ### Commit and push
 
-When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files. You'll often hear a phrase or something along the lines that a Git repository is "you know, just a Directed Acyclic Graph (DAG) of commit objects". So what does that all mean?
+When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files. As you learn more about Git you may hear something along the lines that a Git repository is "you know, just a Directed Acyclic Graph of commit objects". So what does that all mean?
 
 ![Git DAG from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101](images/git-dag.png)
 
 _image from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101_
 
-This is a formal way of saying that Git is a graph (like your social network) representing the changes that have been made to a bunch of files and that these changes have a direction - they only go one way, like [time itself (at least as far as we can tell)](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a `commit object`.
+This is a formal way of saying that Git stores its version control stuff in a graph data structure (like your social network). This graph contains the changes that have been made to the files in the repository and these changes represent a one-way history like [time itself (at least as far as we can tell)](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a `commit object`.
 
 A `commit object` is a data structure that keeps track of a set of changes made to the Git repository. What kinds of things do you think a commit object needs to keep track of? 
 
-1. the **changeset**: the set of files that were changed
-2. a **parent**: Every commit data object keeps track of its parent commit(s). This is the _Directed_ part of the Directed Acyclic Graph. What's the only commit in a Git repository that doesn't have a parent? Are there any commits that can have more than one parent? (we'll go into multi-parent commits later when we cover merging)
+1. the **changeset**: The set of files with modifications that you explicitly told Git to keep track of in this commit
+2. a **parent**: Every commit data object keeps track of its parent commit(s). This is the _Directed_ part of the Directed Acyclic Graph. What's the only commit in a Git repository that doesn't have a parent? Are there any commits that can have more than one parent?
 2. the **diffs**: the actual file-level differences between the files in the _changeset_ and the previous contents of those files in the commit's _parent_ commit 
 4. **provenance metadata**: a commit log message that you write to explain the commit, the git username and email of the commit's author, and more
 5. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository
@@ -219,7 +219,71 @@ Summary: use **commit** and **push** to share your changes with a remote reposit
 
 ## Managing Contributions: Conflicts, Merging, Branching, and Pull Requests
 
+### Conflicts
+
+So far we've handled mostly linear changes where all **commits** and **pushes** were performed on two fully synchronized local and remote repositories. But what happens if you make a change to a file, commit that change, and at the same exact time (or close to it), your collaborator Alice commits and pushes their changes to the same file? There's two answers to this.
+
+The first is that if Alice made changes to an unrelated area of the same file that you made changes to, Git is smart enough to notice that and will happily merge them together with a _merge commit_. For example, if you only changed some text in line 5 of `boids.nlogo` and Alice only changed some text in line 37-42 of `boids.nlogo`, Git will zip those changes together without asking you for input. However, if you changed text in line 5 of `boids.nlogo` AND changed text in lines 39-41 of `boids.nlogo`, well we have a problem! Which changes should Git keep? It doesn't know, and will ask you to figure it out and tell it what to do using a standard "conflict" format that looks something like this (pulled shamelessly from Atlassian's excellent Git tutorial at https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts):
+
+```
+<<<<<<< HEAD
+this is some content to mess with
+content to append
+=======
+totally different content to merge later
+>>>>>>> b781b6b8a51e03e2b5a3d5cfef25fd9567cef53e
+```
+
+We can see some strange new additions
+
+```
+<<<<<<< HEAD
+=======
+>>>>>>> b781b6b8a51e03e2b5a3d5cfef25fd9567cef53e
+```
+
+Think of these new lines as "conflict dividers". The `=======` line is the "center" of the conflict. All the content between the  `<<<<<<< HEAD` line and the center line is content that exists in your **local** repository - usually this is YOUR stuff, your changes. All the content between the center `========` and `>>>>>>> b781b6b8a51e03e2b5a3d5cfef25fd9567cef53e` is content that is present in the **remote repository**, the changes that you want to bring in.
+
+If you try to push your change to GitHub, GitHub will refuse and tell you that you have encountered a merge conflict. So let's set that up for ourselves and see how to resolve them!
+
+#### Assignment 2
+
+In order to generate a merge conflict by ourselves we'll do something similar to assignment 1, where we edit and commit a file in the GitHub web interface, and edit and commit a file in our local repository using GitHub Desktop. The difference is that we will NOT synchronize the local repository using _fetch_ and _pull_ before committing in GitHub Desktop.
+
+To learn how to edit a file in the GitHub web interface, please [read here](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
+
+1. Edit the file `homework-edits.md` in this repository using the [_GitHub Web interface_](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files), and go to the Assignment 2 section of that file. Edit the line `A harrowing time for conflict, but it's important to know how to resolve them gracefully.` and add another sentence at the end of that period. Add anything you like, an inspirational quote, a demotivational mantra, a list of your favorite or most used emojis, etc.
+2. Commit your changes via the GitHub web interface - don't forget to add a commit log message explaining why you chose what you did!
+3. Go back to GitHub Desktop and open `homework-edits.md` in your **local repository** with your local text editor (e.g., Atom, VS Code, Notepad, TextEdit, etc). Make sure you **do not** click the _Fetch origin_ button or you'll have to repeat step 1.
+4. Edit the same exact line `A harrowing time for conflict, but it's important to know how to resolve them gracefully.` and add some different text at the end of that sentence (or replace it entirely for something completely different).
+5. After saving the file, go back to GitHub Desktop, and commit your changes there as well. Now, try to **push** those changes back up to GitHub. You should see something like this:
+
+![GitHub Desktop push conflict](images/github-desktop-push-conflict.png)
+
+GitHub Desktop is telling us that there are newer commits on remote that we haven't synchronized with, and that we need to reconcile the two repositories before we can get our changes back up to GitHub. Click on the blue buttons in GitHub Desktop to continue and `Fetch` and `Pull` those changes into your local repository. Once you've **pull**ed the changes into your local repository, you should be presented with this screen:
+
+![GitHub Desktop Merge Conflict](images/github-desktop-merge-conflict.png)
+
+At this point I have the option to open the conflicting file in Atom, my configured GitHub Desktop text editor, and so I'll do that and resolve the conflict. Atom and other IDEs will sometimes present a convenience option like the following:
+
+![Atom merge conflicts](images/atom-merge-conflicts.png)
+
+Here you can simply select the differently colored `Use me` buttons to directly choose one version of the text or the other but sometimes you **don't want to throw away what's being merged**. However, if you do know that you don't need one version, this is a convenient way to accept one change wholesale vs another change.
+
+Instead, manually delete the `<<<<<`, `=====`, and `>>>>>>` lines and integrate the text to make it how you want the final output to look. Once you've completed that and saved the file, you should see something like this in GitHub Desktop:
+
+![GitHub Desktop Merge resolved](images/github-desktop-conflict-resolved.png)
+
+Go ahead and click the `Continue merge` button, and then **push** your changes back to the origin (our **remote** repository on GitHub). Now if you return to GitHub in your browser and [view your commits](commits/main) you should see something like this:
+
+![GitHub merge commit](images/github-merge-commit.png)
+
+Click on the merge commit and its two preceding commits to see the history of the changes that were made. This special _merge commit_ has two parents, not one as most commits do. Does what Git did make sense?
+
+Congratulations, you've successfully resolved a merge conflict!
+
 ### Branches
+
 You can use branches on GitHub to isolate work that you do not want merged into your final project just yet. Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. Typically you will create a new branch from the default branch of your repository, which is usually called `main`. This makes a new working copy of your `main` branch that you can experiment with. Once your new changes have been reviewed by a teammate, or you are satisfied with them, you can merge your changes into the default branch of your repository. Or you can delete the branch if you decided it was a failed experiment.
 
 Key point: branches are always `based` on an existing branch, usually the default branch. A new branch carries all of the previous Git history of the branch it was based on and starts a new Git history from that point forward, kind of like a tree branch emerging from a tree trunk. Branches can and do evolve independently of each other. Changes you make in a branch `islanders` are not going to be visible in changes made in a different branch `rangers` even though they may share some history together.
@@ -236,7 +300,7 @@ When working with branches, you can use a pull request to tell others about the 
 
 To learn more about pull requests, read ["About Pull Requests"](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). 
 
-### Assignment 2
+### Assignment 3
 
 Create a branch through GitHub Desktop and on the GitHub web interface. Name the branch you create in GitHub Desktop `gh-desktop` and the GitHub web branch `gh-web`. 
 
@@ -342,7 +406,8 @@ Make sure you've completed the following assignments:
 
 * [Assignment 0](#assignment-0) - Familiarize yourself with [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) or equivalent git client and _clone_ this repository to your local machine.
 * [Assignment 1](#assignment-1) - Edit an existing markdown file, create two new markdown files in this repository and experiment with different Markdown styles. Practice _commit, push, fetch, and pull_.
-* [Assignment 2](#assignment-2) - Create two new _branches_, add a NetLogo model and the corresponding documentation to one of them, and push everything to GitHub. Feel free to upload one from the [Netlogo Modeling Commons](http://modelingcommons.org/) or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
+* [Assignment 2](#assignment-2) - Understand what conflicts are and work through a merge conflict. Continue practicing _commit, push, fetch, and pull_.
+* [Assignment 3](#assignment-3) - Create two new _branches_, add a NetLogo model and the corresponding documentation to one of them, and push everything to GitHub. Feel free to upload one from the [Netlogo Modeling Commons](http://modelingcommons.org/) or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
 * [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://comses.net/about/contact/). Was there anything confusing? What can we do better? Make suggestions or ask questions in your Winter School Repository's Discussions or Issues.
