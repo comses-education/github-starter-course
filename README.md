@@ -8,7 +8,7 @@ The goal of this course is to provide a quick but complete introduction to versi
 
 - develop a clear conceptual model that answers *What are version control systems and why should I use them? What is Git and how do I use it?*
 - become more familiar with the GitHub web interface to edit files, clone and fork repositories, manage branches and pull requests
-- practice simple git workflows and become more familiar with git GUI clients (e.g., GitHub Desktop or IDEs like VS Code) to interact with your local and remote Git repositories
+- practice simple git workflows and become more familiar with git GUI clients (e.g., GitHub Desktop or IDEs (Integrated Development Environments) like VS Code) to interact with your local and remote Git repositories
 
 If these are too simple for you, great! We also have [links to more advanced resources](#additional-resources-) that we've found useful over the years. 🚀
 
@@ -48,7 +48,7 @@ Let's start by defining some common terms you'll find in Git and GitHub.
 
 ### Repositories
 
-A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone](#cloning-a-repository), which downloads a local copy of the Git repository to wherever you issued the `clone` request.
+A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone](#clone-a-repository), which downloads a local copy of the Git repository to wherever you issued the `clone` request.
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️  on GitHub, GitLab, BitBucket, etc).
 
@@ -56,7 +56,7 @@ GitHub repositories can contain a **README** plain text file in Markdown format.
 
 It's good practice to add a README file to your repository to explain why your project is useful, what others can do with your project, and how they can use it. This file is also a README to show how to learn Git and GitHub. 😄 It's READMEs all the way down.
 
-To learn more about repositories read ["Creating, Cloning, and Archiving Repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
+To learn more about repositories read ["Creating, Cloning, and Archiving Repositories"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
 
 
 #### Advanced
