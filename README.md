@@ -28,9 +28,9 @@ First, you tell the version control system which files you want to keep track of
 
 Most of the time we want to keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary formats in Git as well like images, zipfiles, or other binary data.
 
-However, **you should avoid** putting *generated* artifacts into Git like compiled executables (e.g. Windows .exe or macOS application bundle), or compiled C code / Java `.class` files. These artifacts are *derivatives* and change when the source code changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. Put the **recipe** into Git, not the **cake**! So, instead of committing the 10 TBs of raw data you generated to create a hauntingly evocative figure for your publication, you should commit the code, documentation, and permanent identifiers / references to the related research objects you used to generate that data and hauntingly evocative figure. You probably **should include the figure itself though** - even though it's generated, it's always a good idea to have a succinct visual reference for what your model does.
+However, **you should avoid** putting *generated* files into Git like compiled executables (e.g. Windows .exe, macOS application bundles, Linux ELF executables), compiled C object files or Java .class files. These files are *derivatives* and change when their source material changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. Put the **recipe** into Git, not the **cake**! So, instead of committing the 10 TBs of raw data you generated to create a hauntingly evocative figure for your publication, you should commit the code, documentation, and permanent identifiers / references to the related research objects you used to generate that data and hauntingly evocative figure. You probably **should include the figures though** - even though they are generated, it's always a good idea to have a succinct visual reference for what your model does.
 
-_NB: handling large-scale, multi-dimensional ABM data outputs is an ongoing challenge, best left to data repositories like Figshare, the Open Science Framework, Dataverse, etc., **not** source code repositories like Git or the CoMSES Model Library!_
+_NOTE: handling large-scale, multi-dimensional ABM data outputs is an ongoing challenge, best left to data repositories like Figshare, the Open Science Framework, Dataverse, etc., **not** source code repositories like Git or the CoMSES Model Library!_
 
 ### Why do we need version control systems?
 
@@ -42,11 +42,11 @@ or this:
 
 ![NetLogo: Neolithic Ecological expansion many versions](images/neolithic-versions.png)
 
-These are typical ad-hoc filename based versioning systems where you change the name of the file each time you make a change. What's lacking? 
+These are typical ad-hoc filename based versioning systems where you change the name of the file each time you make a change. What's lacking from this type of versioning? The short answer is lots of context. What changes were made? Who made them? When were they made? Why were they made?
 
 Git helps you maintain a clean record of what you’ve worked on - which files changed, what were the changes, and why were the changes made. It's also important to know how to  easily switch between versions so you can always get back to that Last Known Good Setup that you had before you began tinkering or experimenting with something new.
 
-Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *Which changes came from where, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of scientific code requires discipline and maintenance, like cleaning or gardening. 
+Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *What changes were made, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of scientific code requires discipline and maintenance, like cleaning or gardening. 
 
 GitHub is a way to use the power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
@@ -56,26 +56,26 @@ Let's start by defining some common terms you'll find in Git and GitHub.
 
 ### Repositories
 
-A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone](#clone-a-repository), which downloads a local copy of the Git repository to the computer where you issued the `clone` request.
+A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone it](#clone-a-repository), which downloads a local copy of the Git repository to the computer where you issued the `clone` request.
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️  on GitHub, GitLab, BitBucket, etc).
 
-GitHub repositories can contain a **README** plain text file in Markdown format. Every directory managed in your Git / GitHub repository will display its README when you view that directory on GitHub - here are [some](https://github.com/comses/winter-school-2022/tree/main/projects) [examples](https://github.com/comses/winter-school-2022/tree/main/initial-tutorial).
+GitHub repositories can contain a **README** plain text file in Markdown format. Every directory in your Git repository on GitHub will display its README when you view that directory on GitHub - here are [some](https://github.com/comses/winter-school-2022/tree/main/projects) [examples](https://github.com/comses/winter-school-2022/tree/main/initial-tutorial). This is a useful way to describe the contents of the directory, its purpose, and any additional context you think would be helpful for someone laboring to understand your code in the future (including your future self!)
 
-It's good practice to add a README file to your repository to explain why your project is useful, what others can do with your project, and how they can use it. This file is also a README to show how to learn Git and GitHub. 😄 It's READMEs all the way down.
+At a minimum it's good practice to add a README file to your repository's root directory to explain why your project is useful, what others can do with your project, and how they can use it. This file is also a README to show how to learn Git and GitHub. 😄 It's READMEs all the way down.
 
 To learn more about repositories read ["Creating, Cloning, and Archiving Repositories"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
 
 #### Advanced
 
-A cloned Git repository has all the files and directories you told Git to track along with an additional `.git` directory living at to the repository's root directory. This .git directory contains all of the magic Git book-keeping and metadata things that capture:
+A cloned Git repository has all the files and directories that Git was told to track along with an additional `.git` directory that lives in the repository's root directory. This `.git` directory contains all the magic Git book-keeping and metadata things that capture:
 
 1. which actual file level changes occurred to the files
 2. when were the changes recorded?
 3. who recorded the changes
 4. why were the changes made _(these last two parts you have to fill in yourself, Git's not THAT smart!)_
 
-Whenever you are doing Git things (executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory that makes a folder a Git repository.
+Whenever you are doing Git things (i.e., executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory that makes a given directory a Git repository.
 
 ### Clone a repository
 
@@ -91,9 +91,11 @@ To learn more about cloning, read ["Cloning a Repository"](https://docs.github.c
 
 ### Assignment 0
 
-Please clone this repository now. In [GitHub Desktop](https://desktop.github.com), access the menu options `File -> Clone` repository (or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> on Windows) and enter the URL from the Code button - it should be something like `https://github.com/comses/learn-git-<your-github-username>`
+Please clone **this** repository now. In [GitHub Desktop](https://desktop.github.com), access the menu options `File -> Clone` repository (or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> on Windows) and enter the URL from the Code button on GitHub - it should be something like `https://github.com/comses/learn-git-<your-github-username>`.
 
 ![Git repository clone URL](images/git-clone.png)
+
+On GitHub Desktop you should see something like this:
 
 ![Clone this repository](images/github-desktop-clone.png)
 
@@ -103,26 +105,28 @@ Take note of where your local Git repository is going to be saved, this is the `
 
 ### Commit and push
 
-When you tell Git to **commit** something you are asking it to record the changes you've made to a file or collection of files. As you learn more about Git you may hear something along the lines that a Git repository is "you know, just a Directed Acyclic Graph of commit objects". So what does that all mean?
+When you tell Git to **commit** something you are asking it to take a snapshot of the changes you've made to a file or collection of files. As you gain more experience with Git you may hear the term "Directed Acyclic Graph" as in ["Git is Directed Acylic Graph of commit objects"](https://medium.com/girl-writes-code/git-is-a-directed-acyclic-graph-and-what-the-heck-does-that-mean-b6c8dec65059). So what does that actually mean?
 
 ![Git DAG from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101](images/git-dag.png)
 
 _image from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101_
 
-This is a formal way of saying that Git stores its version control stuff in a graph data structure (like your social network). This graph contains the changes that have been made to the files in the repository and these changes represent a one-way history like [time itself (at least as far as we can tell)](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a `commit object`.
+This is a formal way of saying that Git stores its version control stuff in a graph data structure (a graph just like your social network graph). This graph data structure contains all the changes that have been made to the files in the repository and these changes represent a one-way history like [time itself (at least as far as we can tell)](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a Git _commit object_.
 
-A `commit object` is a data structure that keeps track of a set of changes made to the Git repository. What kinds of things do you think a commit object needs to keep track of? 
+These _commit objects_ are data structures that represent snapshots of your Git repository at the time that Git was asked to create a _commit object_. What kinds of things do you think a Git _commit object_ might need to keep track of?
 
-1. the **changeset**: The set of files with modifications that you explicitly told Git to keep track of in this commit
+1. the **files that changed**: The files that you explicitly tell Git to take a snapshot of and track in this commit
 2. a **parent**: Every commit data object keeps track of its parent commit(s). This is the _Directed_ part of the Directed Acyclic Graph. What's the only commit in a Git repository that doesn't have a parent? Are there any commits that can have more than one parent?
-2. the **diffs**: the actual file-level differences between the files in the _changeset_ and the previous contents of those files in the commit's _parent_ commit 
-4. **provenance metadata**: a commit log message that you write to explain the commit, the git username and email of the commit's author, and more
-5. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository
-6. what else would you want to keep track of if you were a version control system?
+3. **provenance**: a commit log message that you write to explain the commit, the git username and email of the commit's author
+4. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository and are also how Git commits track their parents.
+
+In summary, a Git repository is a _graph_ of commit objects, where each commit object points at its parent commit(s). That's where the directed part of the graph comes in. Acyclic means that you can't have any loops in the graph (i.e., commits always gaze up at their ancestors). The very first root commit has no parents, and _merge commits_ have two parents.
+
+There's more to Git than just commit objects but we don't need to worry about those abstractions for the purposes of this lesson. There's already enough to think about!
 
 #### Good practices for commits
 
-It's a good rule of thumb to try and keep commits small and self contained - a bug fix and a test that exposes the bug deserves a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
+It's a good rule of thumb to keep commits small and self contained - a bug fix along with a test that exposes the bug deserves a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
 
 If I fix a bug, add a feature, change the way a function is implemented, AND rename some variables all in the same commit it makes it harder to identify what was done where and why. Furthermore, if I made a mistake in any of those changes or change my mind about how I wanted to rename that variable, Git can no longer help me easily revert those changes - I have to revert all of them or manually apply the next set of changes.
 
