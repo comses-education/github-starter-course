@@ -439,7 +439,8 @@ Make sure you've completed the following assignments:
 
 ## Additional Resources 📚
 
-* [A short video explaining GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
+* [A short video explaining GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be)
+* [Conventional Commits: a set of simple rules to create consistent and useful commit logs and messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
 * [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 * [How to use GitHub branches](https://www.youtube.com/watch?v=H5GJfcp3p4Q&feature=youtu.be)
