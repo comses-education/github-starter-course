@@ -60,9 +60,9 @@ A repository is where your project work happens -- it is the _root project_ fold
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️  on GitHub, GitLab, BitBucket, etc).
 
-GitHub repositories can contain a **README** plain text file in Markdown format. Every directory in your Git repository on GitHub will display its README when you view that directory on GitHub - here are [some](https://github.com/comses/winter-school-2022/tree/main/projects) [examples](https://github.com/comses/winter-school-2022/tree/main/initial-tutorial). This is a useful way to describe the contents of the directory, its purpose, and any additional context you think would be helpful for someone laboring to understand your code in the future (including your future self!)
+GitHub repositories can contain a **README** plain text file in Markdown format. Every directory in your Git repository on GitHub will display its README when you view that directory on GitHub - here's [NetLogo's README](https://github.com/netlogo/netlogo#netlogo) and [the Julia language repository's README](https://github.com/JuliaLang/julia#the-julia-language). READMEs are a convenient and useful way to describe the contents of a directory in your GitHub repository - its purpose and any additional context you think would be helpful for someone laboring to understand your codebase in the future, including your future self.
 
-At a minimum it's good practice to add a README file to your repository's root directory to explain why your project is useful, what others can do with your project, and how they can use it. This file is also a README to show how to learn Git and GitHub. 😄 It's READMEs all the way down.
+At a minimum it's good practice to add a README file to your repository's root directory to explain why your project is useful, what others can do with your project, and how they can use it. This file that you're reading right now is a README to show how to learn Git and GitHub ♻.
 
 To learn more about repositories read ["Creating, Cloning, and Archiving Repositories"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories) and ["About README's"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes). 
 
@@ -79,11 +79,11 @@ Whenever you are doing Git things (i.e., executing Git commands) you're using a 
 
 ### Clone a repository
 
-When a repository is created on GitHub.com (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can **clone this repository** to create a local copy on your computer and then use Git to keep the two repositories synced. 
+When a repository is created on GitHub (i.e., you click on the "New" button from your GitHub dashboard or the "Repositories" tab in your GitHub profile), it’s stored remotely in the cloud ☁️. You can **clone this repository** to create a local copy on your computer and then use Git to keep the two repositories synced. 
 
-This makes it easier to work on new features, fix bugs, and push larger commits that affect lots of files. When you **clone a repository**, downloading it to your local computer, you can use your favorite text editor instead of the GitHub UI to edit and modify these files. Some popular text editors include [VS Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or in our case, programming platforms like NetLogo.
+Working on a local repository makes it easier to work on new features, fix bugs, and organize your commits into logical, coherent sets of changes. When you **clone a repository**, downloading it to your local computer, you can use your favorite text editor instead of the GitHub web UI to edit and modify these files. Some popular text editors include [VS Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or in our case, programming platforms like NetLogo. 
 
-Cloning a repository also pulls all the repository data that GitHub has at that point in time, including all versions of every file and folder for the project. This means you can switch to any version that was stored in Git at any point.
+Cloning a repository from GitHub creates an exact replica of the Git repository that GitHub is managing, which includes the entire history of the Git repository. This is what makes Git a **distributed** version control system. You can switch to any version of a file recorded in your Git repository, view differences between versions of files or switch to a specific version.
 
 It's very important to keep in mind the difference between **local** and **remote** repositories. Your **local** repositories are the ones you are directly interacting with, and your **remote** repositories are typically the ones on the cloud, e.g., GitHub.com or GitLab.com or bitbucket.org.
 
