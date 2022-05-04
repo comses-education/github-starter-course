@@ -4,7 +4,7 @@
 
 The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. 
 
-There's no need to complete all of this at one sitting, and if you do happen to keep track of how much time it takes for you to go through this tutorial, please let us know in the Winter School Discussions section on GitHub. This is an initial pilot of the course based on several years of teaching it to a live audience, so please let us know if there is anything we can do to improve!
+There's no need to complete all of this at one sitting, and if you do happen to keep track of how much time it takes for you to go through this tutorial, please let us know in our [CoMSES Education forum](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's always room for improvement!
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
@@ -435,7 +435,7 @@ Make sure you've completed the following assignments:
 * [Assignment 3](#assignment-3) - Create two new _branches_, add a NetLogo model and the corresponding documentation to one of them, and push everything to GitHub. Feel free to upload one from the [Netlogo Modeling Commons](http://modelingcommons.org/) or find one from the [CoMSES.Net Model Library](https://comses.net/codebases/)
 * (Optional) Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
-* [Let us know what worked and what needs improvement in this lesson on our Discussions forum](https://github.com/comses/winter-school-2022/discussions). Was there anything confusing? What can we do better? Make suggestions or ask questions in your Winter School Repository's Discussions or Issues.
+* [Let us know what worked and what needs improvement in this lesson in the CoMSES Education forum](https://forum.comses.net/c/education/28). Was there anything confusing? What can we do better? If you'd like to submit feedback in private, please send an email to us at `education@comses.net`
 
 ## Additional Resources 📚
 
