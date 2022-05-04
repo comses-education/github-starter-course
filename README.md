@@ -4,7 +4,7 @@
 
 The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. 
 
-There's no need to complete all of this at one sitting, and if you do happen to keep track of how much time it takes for you to go through this tutorial, please let us know in our [CoMSES Education forum](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's always room for improvement!
+There's no need to complete all of this at one sitting, and if you do happen to keep track of how much time it takes for you to go through this training module, please let us know in our [CoMSES Education forum](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's always room for improvement!
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
@@ -369,9 +369,9 @@ You can find a model of your choice from the [Netlogo Modeling Commons](http://m
 
 Once you have chosen and downloaded a Netlogo model, save the file to your local Github repository branch that you created.
 
-As you have already learned in the initial tutorial videos, code should always have documentation. Therefore, you will need to add some documentation to accompany your Netlogo model. 
+As you may have already learned in the [Good Practices for Scientific Software Training Module](https://www.comses.net/education/good-practices/), code should always have documentation. Let's add some documentation to accompany your Netlogo model. 
 
-Copy information about the model to a plain text document. The information can be the description stored in the `Info` tab in the Netlogo model. Or, it can be the description that accompanied the model in its online archive.
+Copy information about the model to a plain text document. The information can be the description stored in the `Info` tab in the Netlogo model. Or it can be the description that accompanied the model in its online archive.
 
 Use a text editor to create a file named `documentation.md` and paste the model description into it. 
 
