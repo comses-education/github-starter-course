@@ -32,6 +32,8 @@ However, **you should avoid** putting *generated* files into Git like compiled e
 
 _NOTE: handling large-scale, multi-dimensional ABM data outputs is an ongoing challenge, best left to data repositories like Figshare, the Open Science Framework, Dataverse, etc., **not** source code repositories like Git or the CoMSES Model Library!_
 
+For a set of domain specific repositories and guidance from Nature Scientific Data, please see https://www.nature.com/sdata/policies/repositories
+
 ### Why do we need version control systems?
 
 If you've ever had to collaborate with others on a paper or team coding project, you may have experienced something like this:
