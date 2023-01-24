@@ -77,7 +77,7 @@ A cloned Git repository has all the files and directories that Git was told to t
 3. who recorded the changes
 4. why were the changes made _(these last two parts you have to fill in yourself, Git's not THAT smart!)_
 
-Whenever you are doing Git things (i.e., executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory that makes a given directory a Git repository.
+Whenever you are doing Git things (i.e., executing Git commands) you're using a Git client to interact with the stuff inside the managed `.git` directory that makes its relative root directory a special Git repository.
 
 ### Clone a repository
 
@@ -85,9 +85,9 @@ When a repository is created on GitHub (i.e., you click on the "New" button from
 
 Working on a local repository makes it easier to work on new features, fix bugs, and organize your commits into logical, coherent sets of changes. When you **clone a repository**, downloading it to your local computer, you can use your favorite text editor instead of the GitHub web UI to edit and modify these files. Some popular text editors include [VS Code](https://code.visualstudio.com/), [Atom](https://atom.io/) or in our case, programming platforms like NetLogo. 
 
-Cloning a repository from GitHub creates an exact replica of the Git repository that GitHub is managing, which includes the entire history of the Git repository. This is what makes Git a **distributed** version control system. You can switch to any version of a file recorded in your Git repository, view differences between versions of files or switch to a specific version.
+Cloning a repository from GitHub creates an exact replica of the Git repository that GitHub is managing, which includes the entire history of the Git repository. This is what makes Git a **distributed** version control system. You can switch to any version of any file recorded in your Git repository and view the history of changes that happened to that file, a fully provenanced graph of changes.
 
-It's very important to keep in mind the difference between **local** and **remote** repositories. Your **local** repositories are the ones you are directly interacting with, and your **remote** repositories are typically the ones on the cloud, e.g., GitHub.com or GitLab.com or bitbucket.org.
+It's very important  the difference between **local** and **remote** repositories. **Local** repositories exist on the filesystem of the computer you're directly interacting with and **remote** repositories are exist somewhere accessible on the network, e.g., GitHub.com, GitLab.com or bitbucket.org.
 
 To learn more about cloning, read ["Cloning a Repository"](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
@@ -113,28 +113,26 @@ When you tell Git to **commit** something you are asking it to take a snapshot o
 
 _image from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101_
 
-This is a formal way of saying that Git stores its version control stuff in a graph data structure (a graph just like your social network graph). This graph data structure contains all the changes that have been made to the files in the repository and these changes represent a one-way history like [time itself (at least as far as we can tell)](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a Git _commit object_.
+Git stores its version control metadata in a graph data structure; a graph like your social network graph. This graph data structure contains all the changes that have been made to the files in the repository, representing a one-way history like [time itself](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a Git _commit object_.
 
-These _commit objects_ are data structures that represent snapshots of your Git repository at the time that Git was asked to create a _commit object_. What kinds of things do you think a Git _commit object_ might need to keep track of?
+These _commit objects_ are data structures with snapshots of your Git repository at the time that Git was asked to create a _commit object_. What kinds of things do you think a Git _commit object_ might need to keep track of?
 
 1. the **files that changed**: The files that you explicitly tell Git to take a snapshot of and track in this commit
 2. a **parent**: Every commit data object keeps track of its parent commit(s). This is the _Directed_ part of the Directed Acyclic Graph. What's the only commit in a Git repository that doesn't have a parent? Are there any commits that can have more than one parent?
 3. **provenance**: a commit log message that you write to explain the commit, the git username and email of the commit's author
-4. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository and are also how Git commits track their parents.
+4. a **unique hash ID**: you'll see these often on GitHub as long strings like `fde99eeb73f2426769fe02b5508b0ebf08514f2d` - these hash IDs uniquely identify a commit in a Git repository and used to track a given Git commit's parent(s).
 
-In summary, a Git repository is a _graph_ of commit objects, where each commit object points at its parent commit(s). That's where the directed part of the graph comes in. Acyclic means that you can't have any loops in the graph (i.e., commits always gaze up at their ancestors). The very first root commit has no parents, and _merge commits_ have two parents.
-
-There's more to Git than just commit objects but we don't need to worry about those abstractions for the purposes of this lesson. There's already enough to think about!
+In summary, a Git repository is a _graph_ of commit objects, where each commit object points to its parent commit(s). That's where the directed part of the graph comes in. Acyclic means that you can't have any loops in the graph (i.e., commits always gaze up at their ancestors). The very first root commit has no parents, and _merge commits_ have two or more parents.
 
 #### Good practices for commits
 
 It's a good rule of thumb to keep commits small and self contained - a bug fix along with a test that exposes the bug deserves a commit to capture just those changes. This makes it easier to follow a project's history over time and understand what changes were made where and why.
 
-If I fix a bug, add a feature, change the way a function is implemented, AND rename some variables all in the same commit it makes it harder to identify what was done where and why. Furthermore, if I made a mistake in any of those changes or change my mind about how I wanted to rename that variable, Git can no longer help me easily revert those changes - I have to revert all of them or manually apply the next set of changes.
+If I fix a bug, add a feature, refactor the underlying implementation of a given function, and rename some variables in a module all within the same commit it makes it MUCH harder to identify what was done where and why. It also makes it hard to correlate changes in observed program behavior to changes in the code - it could have been any of those changes! Furthermore, if I made a mistake in any of those changes or end up changing my mind about how I wanted to rename that variable, Git can no longer help me easily revert those changes - I have to either revert all of them or manually apply the next set of changes.
 
-Instead, make each of those tasks their own individual commit. When commits are small and localized it makes it a lot easier to reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, self-contained, and semantically sensible commits - you'll thank yourself later!
+So it's a god rule of thumb to break up each set of coherent changes into multiple commits, where one commit corresponds to a *coherent* set of changes. In general, small and localized commits are easier to understand and reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, self-contained, and semantically sensible commits - you'll thank yourself later!
 
-Please note that when you commit your work **locally**, it doesn't automatically go to your remote repository on GitHub.com. You'll need to **push** your work to GitHub.com or another remote repository for those commits to be added. If you performed the commit on GitHub.com though, there is no need to push - it started off there!
+NOTE: when you commit your work **locally**, into your **local repository** it doesn't automatically go to your remote repository on GitHub.com. You'll still need to **push** your work to GitHub.com or other remote repository for those commits to be synchronized with that remote. If you made the commit on GitHub.com through its native web editor there is no need to push - the commit goes directly into that remote repository.
 
 ### Fetch and Pull
 
