@@ -2,9 +2,9 @@
 
 ## 🤓 Course overview and learning outcomes 
 
-The goal of this course is to provide a quick but complete introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. 
+This course is intended to be a condensed, comprehensive-enough introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. 
 
-There's no need to complete all of this at one sitting, and if you do happen to keep track of how much time it takes for you to go through this training module, please let us know in our [CoMSES Education forum](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's always room for improvement!
+We would like to get a sense of how long it takes to go through this training module as well as gather feedback on what worked and what didn't. If you'd like to contribute to these efforts, please [post your experiences on our Education Forums](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's still a lot of room for improvement.
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
@@ -12,27 +12,27 @@ _from [XKCD](https://xkcd.com/1597/)_
 
 ### Objectives
 
-- develop a clear conceptual model that answers *What are version control systems and why should I use them? What is Git and how do I use it?*
-- become more familiar with the GitHub web interface to edit files, clone and fork repositories, manage branches and pull requests
-- practice simple git workflows and become more familiar with git GUI clients e.g. [GitHub Desktop](https://desktop.github.com) or Integrated Development Environments (IDEs) like [VS Code](https://code.visualstudio.com) | [Atom](https://atom.io/) to interact with your local and remote Git repositories
+- develop a clear conceptual model for *What are version control systems and why should I use them? What is Git and how do I use it?*
+- gain familiarity with the GitHub web interface: edit files, clone and fork repositories, manage branches and pull requests, and resolve merge conflicts
+- practice basic git workflows - this particular course focuses on GUI clients like [GitHub Desktop](https://desktop.github.com) or integrated development environments like [VS Code](https://code.visualstudio.com) or [Atom](https://atom.io/) to interact with your local and remote Git repositories 
 
-If these are too simple for you, great! We also have [links to more advanced resources](#additional-resources-) that we've found useful over the years. 🚀
+We also maintain a [list of additional resources](#additional-resources-) that we've found useful over the years - please feel free to edit / update these! 🚀
 
 ## :octocat: Git and GitHub
 
 Git is a **distributed Version Control System (VCS)**.
 
-A **version control system** is a software tool that helps you track changes to a set of files. These can be any kinds of files: images, movies, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, Word documents, PDFs, etc. 
+A **version control system** is a software tool that helps you **track changes to a set of files**. These can be any kinds of files: cat pictures, movies, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, tarballs, Word documents, PDFs, etc. 
 
-First, you tell the version control system which files you want to keep track of: for example, a NetLogo model, `boids.nlogo` and a `README.md` file describing and documenting it. This is the _initial_ version of your files. Whenever you make subsequent changes to your tracked file(s), you can then tell the version control system, _"Hey! Keep track of the current state of this file now."_ and it will efficiently store the difference between the current state of the file and state of the file the last time you asked the version control system, _"Hey! Keep track of the current state of this file."_ which could be the _initial_ version or some subsequent version. For simplicity we can think of it as v1, v2, v3, v4, etc.
+To get started, you've got to tell the version control system which files you want to keep track of: let's say the NetLogo model, `boids.nlogo` and a `README.md` file that describes and documents the model. This is the _initial_ version of your files. Whenever you make subsequent changes to your tracked file(s), you tell the version control system, _"Hey! Keep track of the current state of this file now."_ and it will efficiently store the difference between the current state of the file and the previous state of the file from the last time you told the version control system, _"Hey! Keep track of the current state of this file."_. This previous state could be the _initial_ version or any subsequent version. For simplicity you can think of it as v1, v2, v3, v4, etc.
 
-Most of the time we want to keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary formats in Git as well like images, zipfiles, or other binary data.
+Most of the time we want to keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary files in Git as well like images, zipfiles, or any other files containing binary (i.e., non plain-text) data.
 
-However, **you should avoid** putting *generated* files into Git like compiled executables (e.g. Windows .exe, macOS application bundles, Linux ELF executables), compiled C object files or Java .class files. These files are *derivatives* and change when their source material changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. Put the **recipe** into Git, not the **cake**! So, instead of committing the 10 TBs of raw data you generated to create a hauntingly evocative figure for your publication, you should commit the code, documentation, and permanent identifiers / references to the related research objects you used to generate that data and hauntingly evocative figure. You probably **should include the figures though** - even though they are generated, it's always a good idea to have a succinct visual reference for what your model does.
+However, **you should avoid** putting *generated* files into Git like compiled executables (e.g. Windows .exe, macOS application bundles, Linux ELF executables), compiled C object files or Java .class files. These files are *derivatives* and change when their source material changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. Put the **recipe** into Git, not the **cake**! So, instead of committing the 10 TBs of raw data you generated to create a hauntingly evocative figure for your publication, commit the code, documentation, and permanent identifiers / references to the related research objects used to generate that data + figure. You probably **should include the figures if they are not too large** - even though they are generated, it's always a good idea to have a succinct visual reference for what your model does.
 
 _NOTE: handling large-scale, multi-dimensional ABM data outputs is an ongoing challenge, best left to data repositories like Figshare, the Open Science Framework, Dataverse, etc., **not** source code repositories like Git or the CoMSES Model Library!_
 
-For a set of domain specific repositories and guidance from Nature Scientific Data, please see https://www.nature.com/sdata/policies/repositories
+For more information on domain specific repositories and guidance from Nature Scientific Data, please see https://www.nature.com/sdata/policies/repositories
 
 ### Why do we need version control systems?
 
@@ -44,21 +44,23 @@ or this:
 
 ![NetLogo: Neolithic Ecological expansion many versions](images/neolithic-versions.png)
 
-These are typical ad-hoc filename based versioning systems where you change the name of the file each time you make a change. What's lacking from this type of versioning? The short answer is lots of context. What changes were made? Who made them? When were they made? Why were they made?
+These are typical ad-hoc filename based versioning systems where the name of the file gets changed every time some changes are made (of course, there's no guarantee that changes were made, right? You can change a filename at any time). 
 
-Git helps you maintain a clean record of what you’ve worked on - which files changed, what were the changes, and why were the changes made. It's also important to know how to  easily switch between versions so you can always get back to that Last Known Good Setup that you had before you began tinkering or experimenting with something new.
+What's lacking from this type of versioning? Short answer: lots of context. What changes were made? Who made them? When were they made? Why were they made?
 
-Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *What changes were made, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of scientific code requires discipline and maintenance, like cleaning or gardening. 
+Git helps you and your team maintain a clean record of work - which files changed, what were the changes, when did they occur, and why were they made. It also helps you easily switch between versions so you can always get back to that Last Known Good Setup that you had before you began tinkering or experimenting with something new, and it helps you experiment with new things or maintain existing code over time with _branches_, allowing you to maintain and preserve multiple views over your codebase concurrently.
 
-GitHub is a way to use the power of Git online with an easy-to-use web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
+Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *What changes were made, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of scientific code requires discipline and maintenance, like keeping a house clean or maintaining a garden.
+
+GitHub is a way to use the power of Git online with an "easy-to-use" web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
 ## Key Concepts
 
-Let's start by defining some common terms you'll find in Git and GitHub.
+Let's define some common terms you'll find in Git and GitHub.
 
 ### Repositories
 
-A repository is where your project work happens -- it is the _root project_ folder that contains all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone it](#clone-a-repository), which downloads a local copy of the Git repository to the computer where you issued the `clone` request.
+A repository is where your project work happens -- it is the _root project_ folder with all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone it](#clone-a-repository), which downloads a local copy of the Git repository to the computer where you issued the `clone` request.
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️  on GitHub, GitLab, BitBucket, etc).
 
@@ -107,13 +109,13 @@ Take note of where your local Git repository is going to be saved, this is the `
 
 ### Commit and push
 
-When you tell Git to **commit** something you are asking it to take a snapshot of the changes you've made to a file or collection of files. As you gain more experience with Git you may hear the term "Directed Acyclic Graph" as in ["Git is Directed Acylic Graph of commit objects"](https://medium.com/girl-writes-code/git-is-a-directed-acyclic-graph-and-what-the-heck-does-that-mean-b6c8dec65059). So what does that actually mean?
+When you tell Git to **commit** something you are asking it to take a snapshot of the changes you've made to a file or collection of files. As you gain more experience with Git you may hear the term "Directed Acyclic Graph" as in ["Git is a Directed Acylic Graph of commit objects"](https://medium.com/girl-writes-code/git-is-a-directed-acyclic-graph-and-what-the-heck-does-that-mean-b6c8dec65059). So what does that actually mean?
 
 ![Git DAG from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101](images/git-dag.png)
 
 _image from https://www.oreilly.com/library/view/git-pocket-guide/9781449327507/ch01.html#fig0101_
 
-Git stores its version control metadata in a graph data structure; a graph like your social network graph. This graph data structure contains all the changes that have been made to the files in the repository, representing a one-way history like [time itself](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a Git _commit object_.
+Git stores its version control metadata in a graph data structure; a graph just like your social network graph. This graph data structure contains all the changes that have been made to the files in the repository, representing a one-way history like [time itself](https://quoteinvestigator.com/2015/09/16/history/). Each of the nodes in that graph you see above is a Git _commit object_.
 
 These _commit objects_ are data structures with snapshots of your Git repository at the time that Git was asked to create a _commit object_. What kinds of things do you think a Git _commit object_ might need to keep track of?
 
@@ -130,7 +132,7 @@ It's a good rule of thumb to keep commits small and self contained - a bug fix a
 
 If I fix a bug, add a feature, refactor the underlying implementation of a given function, and rename some variables in a module all within the same commit it makes it MUCH harder to identify what was done where and why. It also makes it hard to correlate changes in observed program behavior to changes in the code - it could have been any of those changes! Furthermore, if I made a mistake in any of those changes or end up changing my mind about how I wanted to rename that variable, Git can no longer help me easily revert those changes - I have to either revert all of them or manually apply the next set of changes.
 
-So it's a god rule of thumb to break up each set of coherent changes into multiple commits, where one commit corresponds to a *coherent* set of changes. In general, small and localized commits are easier to understand and reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, self-contained, and semantically sensible commits - you'll thank yourself later!
+So it's a good rule of thumb to break up each set of coherent changes into multiple commits, where one commit corresponds to a *coherent* set of changes. In general, small and localized commits are easier to understand and reason about. Of course, rules are meant to be broken, so don't sweat it if you end up having a large, sprawling commit. Just strive for small, self-contained, and semantically sensible commits - you'll thank yourself later!
 
 NOTE: when you commit your work **locally**, into your **local repository** it doesn't automatically go to your remote repository on GitHub.com. You'll still need to **push** your work to GitHub.com or other remote repository for those commits to be synchronized with that remote. If you made the commit on GitHub.com through its native web editor there is no need to push - the commit goes directly into that remote repository.
 
