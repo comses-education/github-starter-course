@@ -369,7 +369,7 @@ You can find a model of your choice from the [Netlogo Modeling Commons](http://m
 
 Once you have chosen and downloaded a Netlogo model, save the file to your local Github repository branch that you created.
 
-As you may have already learned in the [Good Practices for Scientific Software Training Module](https://www.comses.net/education/good-practices/), code should always have documentation. Let's add some documentation to accompany your Netlogo model. 
+As you may have already learned in the [Good Practices for Scientific Software Training Module](https://www.comses.net/education/responsible-practices/), code should always have documentation. Let's add some documentation to accompany your Netlogo model. 
 
 Copy information about the model to a plain text document. The information can be the description stored in the `Info` tab in the Netlogo model. Or it can be the description that accompanied the model in its online archive.
 
