@@ -2,6 +2,9 @@ name: Check Markdown links
 
 on: 
   push:
+  
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   markdown-link-check:
@@ -11,4 +14,6 @@ jobs:
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         use-quiet-mode: 'yes'
-
+        
+        
+        
