@@ -445,17 +445,15 @@ You can train your GitHub skills by contributing to this repo.
 
 Fork this repository on GitHub. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554428-3bce3d9a-2eb4-43f5-8974-59256a1336a3.png)<br/><br/>
-Now, go to your forked repository. Make sure your fork is synced with the upstream repository. You do that by clicking on this:<br/>
+Now, go to your forked repository. Make sure your fork is synced with the upstream repository. You have to do this periodically to make sure your branch is always up to date. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)<br/><br/>
-This small modal will pop up:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219554774-9dfab89b-8874-4fa7-a53f-63c812908f90.png)<br/><br/>
-Click on 'Update Branch':<br/>
+A small modal will pop up. Click on 'Update Branch':<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)<br/><br/>
 Then, create a new branch in the repo. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219555316-d166aac0-8491-47bc-8fa8-693d5027104c.png)<br/><br/>
 And then this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)<br/><br/>
-Make whatever changes you want to make to the repository then commit and push it to your forked repo then create a pull request from your fork's branch to the upstream repository. You do that by clicking on this:<br/>
+Make whatever changes you want to make to the repository then commit and push it to your forked repo. After doing all that, create a pull request from your fork's branch to the upstream repository. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219556366-14d291a0-20b4-427c-863d-c4d4195e68ad.png)<br/><br/>
 Write a descriptive title here:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219557051-33836717-361a-4a03-94c1-d8e1413c24d6.png)<br/><br/>
@@ -464,7 +462,7 @@ And a useful description here:<br/>
 Once you're prepared and you've written everything needed, click here:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219557134-9d38142b-4a4c-4955-9708-278ba674748a.png)<br/><br/>
 
-🎉 Good job!
+🎉 Good job, you have just contributed to this repo!
 
 
 ## Additional Resources 📚
