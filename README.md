@@ -466,6 +466,7 @@ A box will appear, click on `Open pull request`<br/>
 Give your pull request a descriptive title and a useful description. Once you are ready, click on `Create pull request`<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219561698-a82d16bc-d6d6-4783-8222-e24c14239d04.png)<br/><br/>
 🎉 Good job, you have just contributed to this repo!
+The owner of the repository will later give you feedback on your pull request. Respond to it and revise your changes based on feedback.
 
 
 ## Additional Resources 📚
