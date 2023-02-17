@@ -452,7 +452,11 @@ After forking the repository, you will be in your forked repository. Which looks
 Make sure your forked repository is in sync with the upstream branch. You will have to do this periodically to ensure that your fork is up to date. You do that by clickin on `Sync fork`:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219559314-5b2da1ee-2020-44f5-9555-8d0d345e3f36.png)<br/><br/>
 If your fork is out of date, this box will appear. Compare the changes by clicking on `Compare`. Once you are satisfied with the changes, click on `Update Branch`:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219559801-46ab912b-5910-4e61-b5e1-9885b963ace1.png)
+![image](https://user-images.githubusercontent.com/84760072/219559801-46ab912b-5910-4e61-b5e1-9885b963ace1.png)<br/>
+You don't want to make commits straight to your main branch so make a new branch. You do that by clicking on `Branch`<br/>
+![image](https://user-images.githubusercontent.com/84760072/219560160-b87d5dfc-aa55-4051-bd7d-ab8add748190.png)<br/><br/>
+You will be redirected to this page. You then create a new branch by clicking on `New branch`<br/>
+![image](https://user-images.githubusercontent.com/84760072/219560296-4493f20d-b791-4266-b79a-d34cdd7d3841.png)<br/>
 
 
 🎉 Good job, you have just contributed to this repo!
