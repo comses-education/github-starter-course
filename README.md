@@ -448,11 +448,11 @@ Steps:
 ![image](https://user-images.githubusercontent.com/84760072/219554428-3bce3d9a-2eb4-43f5-8974-59256a1336a3.png)
 * Now, go to your forked repository.  
 * Make sure your fork is synced with the upstream repository. You do that by clicking on this:  
-![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)  
+![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)   
 
-* This small modal will pop up
+* This small modal will pop up  
 ![image](https://user-images.githubusercontent.com/84760072/219554774-9dfab89b-8874-4fa7-a53f-63c812908f90.png)
-* Click on 'Update Branch'
+* Click on 'Update Branch'  
 ![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)
 * Then, create a new branch in the repo
 
