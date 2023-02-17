@@ -457,8 +457,14 @@ You don't want to make commits straight to your main branch so make a new branch
 ![image](https://user-images.githubusercontent.com/84760072/219560160-b87d5dfc-aa55-4051-bd7d-ab8add748190.png)<br/><br/>
 You will be redirected to this page. You then create a new branch by clicking on `New branch`<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219560296-4493f20d-b791-4266-b79a-d34cdd7d3841.png)<br/>
-
-
+This modal will pop up. Give your branch an informative name under `Branch name` and then click on `Create branch`<br/>
+![image](https://user-images.githubusercontent.com/84760072/219560979-2db03899-15af-4aa9-b299-bfd022d850eb.png)
+Make whatever changes 🔨 you want to make, then commit and push them to your fork. Once you are satisfied with your changes, you should make a pull request! You do that by clicking on `Contribute`<br/>
+![image](https://user-images.githubusercontent.com/84760072/219561275-2ae65aa1-50d2-4bb3-83fc-85b6e61d2952.png)<br/><br/>
+A box will appear, click on `Open pull request`<br/>
+![image](https://user-images.githubusercontent.com/84760072/219561409-a82d6477-aae9-4908-8086-be050da0fc21.png)<br/><br/>
+Give your pull request a descriptive title and a useful description. Once you are ready, click on `Create pull request`<br/>
+![image](https://user-images.githubusercontent.com/84760072/219561698-a82d16bc-d6d6-4783-8222-e24c14239d04.png)<br/><br/>
 🎉 Good job, you have just contributed to this repo!
 
 
