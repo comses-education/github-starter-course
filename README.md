@@ -439,6 +439,23 @@ Make sure you've completed the following assignments:
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
 * [Let us know what worked and what needs improvement in this lesson in the CoMSES Education forum](https://forum.comses.net/c/education/28). Was there anything confusing? What can we do better? If you'd like to submit feedback in private, please send an email to us at `education@comses.net`
 
+## 💪 Contributing to this repo
+
+You can train your GitHub skills by contributing to this repo.
+
+Steps:
+* Fork this repository on GitHub. You do that by clicking on this:
+![image](https://user-images.githubusercontent.com/84760072/219554428-3bce3d9a-2eb4-43f5-8974-59256a1336a3.png)
+* Now, go to your forked repository.
+* Make sure your fork is synced with the upstream repository. You do that by clicking on this:
+![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)
+* This small modal will pop up
+![image](https://user-images.githubusercontent.com/84760072/219554774-9dfab89b-8874-4fa7-a53f-63c812908f90.png)
+* Click on 'Update Branch'
+![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)
+* Then, create a new branch in the repo
+
+
 ## Additional Resources 📚
 
 * [Short video on the big picture basics of GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be)
