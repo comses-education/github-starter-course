@@ -443,7 +443,6 @@ Make sure you've completed the following assignments:
 
 You can train your GitHub skills by contributing to this repo.
 
-Steps:
 Fork this repository on GitHub. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554428-3bce3d9a-2eb4-43f5-8974-59256a1336a3.png)<br/><br/>
 Now, go to your forked repository. Make sure your fork is synced with the upstream repository. You do that by clicking on this:<br/>
