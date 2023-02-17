@@ -450,15 +450,15 @@ Steps:
 * Make sure your fork is synced with the upstream repository. You do that by clicking on this:  
 ![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)   
 
-* This small modal will pop up  
+This small modal will pop up  
 ![image](https://user-images.githubusercontent.com/84760072/219554774-9dfab89b-8874-4fa7-a53f-63c812908f90.png)
-* Click on 'Update Branch'  
+Click on 'Update Branch'  
 ![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)
-* Then, create a new branch in the repo. You do that by clicking on this:  
+Then, create a new branch in the repo. You do that by clicking on this:  
 ![image](https://user-images.githubusercontent.com/84760072/219555316-d166aac0-8491-47bc-8fa8-693d5027104c.png)
-* And then this:
+And then this:  
 ![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)
-
+Make whatever changes you want to make to the repository then commit and push it to your forked repo.
 
 
 
