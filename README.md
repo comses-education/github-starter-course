@@ -439,6 +439,49 @@ Make sure you've completed the following assignments:
 * (Optional) Go to your user dashboard and create a new repository to practice what you've learned here. Feel free to experiment!
 * [Let us know what worked and what needs improvement in this lesson in the CoMSES Education forum](https://forum.comses.net/c/education/28). Was there anything confusing? What can we do better? If you'd like to submit feedback in private, please send an email to us at `education@comses.net`
 
+## 💪 Contributing to the classroom repository
+
+If you would like to improve this lesson, you can contribute to the classroom repository at https://github.com/comses-education/github-starter-course
+  
+Fork this repository on GitHub. You do that by clicking on `Fork`:
+![image](https://user-images.githubusercontent.com/84760072/219558561-441e6462-035c-4807-932b-bff465e98968.png) 
+  
+Usually your forks have the same name as the upstream repository so nothing needs to be changed here. Click on `Create fork`:  
+![image](https://user-images.githubusercontent.com/84760072/219558663-8f2a6a63-fa10-428b-99a0-ffb316b3a521.png)  
+  
+After forking the repository, you will be in your forked repository. Which looks something like this:  
+![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)  
+  
+Make sure your forked repository is in sync with the upstream branch. You will have to do this periodically to ensure that your fork is up to date. You do that by clickin on `Sync fork`:  
+![image](https://user-images.githubusercontent.com/84760072/219559314-5b2da1ee-2020-44f5-9555-8d0d345e3f36.png)  
+  
+If your fork is out of date, this box will appear. Compare the changes by clicking on `Compare`. Once you are satisfied with the changes, click on `Update Branch`:  
+![image](https://user-images.githubusercontent.com/84760072/219559801-46ab912b-5910-4e61-b5e1-9885b963ace1.png)  
+  
+Commiting straight to the main branch is usually a bad idea. There are several reasons for this:  
+* If you create bugs, there is no way to 'go back' other than deleting and reversing commits. This method is a lot more error-prone and might also cause you to lose parts of the code that were ok.  
+* It means that commits have to be merged each time 2 people change a file. This is troublesome.  
+  
+As such, we make a new branch. You do that by clicking on `[number] branch`. [number] can be any number, all that matters is you click on it.  
+![image](https://user-images.githubusercontent.com/84760072/219560160-b87d5dfc-aa55-4051-bd7d-ab8add748190.png)  
+  
+You will be redirected to this page. You then create a new branch by clicking on `New branch`  
+![image](https://user-images.githubusercontent.com/84760072/219560296-4493f20d-b791-4266-b79a-d34cdd7d3841.png)  
+  
+This modal will pop up. Give your branch an informative name under `Branch name` and then click on `Create branch`  
+![image](https://user-images.githubusercontent.com/84760072/219560979-2db03899-15af-4aa9-b299-bfd022d850eb.png)  
+  
+Make whatever changes 🔨 you want to make, then commit and push them to your fork. Once you are satisfied with your changes, you should make a pull request! You do that by clicking on `Contribute`  
+![image](https://user-images.githubusercontent.com/84760072/219561275-2ae65aa1-50d2-4bb3-83fc-85b6e61d2952.png)<br/><br/>
+A box will appear, click on `Open pull request`  
+![image](https://user-images.githubusercontent.com/84760072/219561409-a82d6477-aae9-4908-8086-be050da0fc21.png)  
+  
+Give your pull request a descriptive title and a useful description. Once you are ready, click on `Create pull request`  
+![image](https://user-images.githubusercontent.com/84760072/219561698-a82d16bc-d6d6-4783-8222-e24c14239d04.png)  
+  
+The maintainer(s) of this repository will now be able to review your changes and provide feedback and guidance on your proposed contributions. You may need to add more commits or close and open a new pull request based on their feedback.  
+🎉 Good job, you have just contributed to this repo 💪!  
+
 ## Additional Resources 📚
 
 * [Short video on the big picture basics of GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be)
