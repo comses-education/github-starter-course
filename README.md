@@ -454,7 +454,12 @@ Steps:
 ![image](https://user-images.githubusercontent.com/84760072/219554774-9dfab89b-8874-4fa7-a53f-63c812908f90.png)
 * Click on 'Update Branch'  
 ![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)
-* Then, create a new branch in the repo
+* Then, create a new branch in the repo. You do that by clicking on this:  
+![image](https://user-images.githubusercontent.com/84760072/219555316-d166aac0-8491-47bc-8fa8-693d5027104c.png)
+* And then this:
+![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)
+
+
 
 
 ## Additional Resources 📚
