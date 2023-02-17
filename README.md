@@ -444,9 +444,14 @@ Make sure you've completed the following assignments:
 You can train your GitHub skills by contributing to this repo.
 
 Fork this repository on GitHub. You do that by clicking on this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219554428-3bce3d9a-2eb4-43f5-8974-59256a1336a3.png)<br/><br/>
-Now, go to your forked repository. Make sure your fork is synced with the upstream repository. You have to do this periodically to make sure your branch is always up to date. You do that by clicking on this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)<br/><br/>
+![image](https://user-images.githubusercontent.com/84760072/219558561-441e6462-035c-4807-932b-bff465e98968.png)<br/><br/>
+Name it something informative and then click on this:
+![image](https://user-images.githubusercontent.com/84760072/219558663-8f2a6a63-fa10-428b-99a0-ffb316b3a521.png)
+After forking the repository, you will be in your forked repository. Which looks something like this:<br/>
+![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)
+Make sure your forked repository is in sync with the upstream branch. You will have to do this periodically to ensure that your fork is up to date. You do that by clickin on this:
+![image](https://user-images.githubusercontent.com/84760072/219559033-06c71ed8-e8a7-47c3-9db0-373d609a83b0.png)
+
 A small modal will pop up. Click on 'Update Branch':<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)<br/><br/>
 Then, create a new branch in the repo. You do that by clicking on this:<br/>
