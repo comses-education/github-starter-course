@@ -446,10 +446,8 @@ You can train your GitHub skills by contributing to this repo.
 Steps:
 Fork this repository on GitHub. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554428-3bce3d9a-2eb4-43f5-8974-59256a1336a3.png)<br/><br/>
-Now, go to your forked repository.<br/>
-Make sure your fork is synced with the upstream repository. You do that by clicking on this:<br/>
+Now, go to your forked repository. Make sure your fork is synced with the upstream repository. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554701-965dc598-6835-439f-a7f1-159ed17d6706.png)<br/><br/>
-
 This small modal will pop up:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554774-9dfab89b-8874-4fa7-a53f-63c812908f90.png)<br/><br/>
 Click on 'Update Branch':<br/>
@@ -459,7 +457,10 @@ Then, create a new branch in the repo. You do that by clicking on this:<br/>
 And then this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)<br/><br/>
 Make whatever changes you want to make to the repository then commit and push it to your forked repo.<br/>
-
+![image](https://user-images.githubusercontent.com/84760072/219556361-1a8f9479-315d-448a-98b6-29f4d2e4b679.png)
+Create a pull request from your fork's branch to the upstream repository.<br/>
+![image](https://user-images.githubusercontent.com/84760072/219556366-14d291a0-20b4-427c-863d-c4d4195e68ad.png)<br/><br/>
+🎉 Good job!
 
 
 ## Additional Resources 📚
