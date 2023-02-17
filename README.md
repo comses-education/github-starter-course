@@ -443,29 +443,15 @@ Make sure you've completed the following assignments:
 
 You can train your GitHub skills by contributing to this repo.
 
-Fork this repository on GitHub. You do that by clicking on this:<br/>
+Fork this repository on GitHub. You do that by clicking on `Fork`:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219558561-441e6462-035c-4807-932b-bff465e98968.png)<br/><br/>
-Name it something informative and then click on this:
+Name your fork something informative by changing the text under `Repository name` and then click on `Create fork`:
 ![image](https://user-images.githubusercontent.com/84760072/219558663-8f2a6a63-fa10-428b-99a0-ffb316b3a521.png)
 After forking the repository, you will be in your forked repository. Which looks something like this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)
-Make sure your forked repository is in sync with the upstream branch. You will have to do this periodically to ensure that your fork is up to date. You do that by clickin on this:
-![image](https://user-images.githubusercontent.com/84760072/219559033-06c71ed8-e8a7-47c3-9db0-373d609a83b0.png)
-
-A small modal will pop up. Click on 'Update Branch':<br/>
-![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)<br/><br/>
-Then, create a new branch in the repo. You do that by clicking on this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219557855-440c15ba-8504-49a8-b5d0-ca4d627c304c.png)<br/><br/>
-And then this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)<br/><br/>
-Make whatever changes you want to make to the repository then commit and push it to your forked repo. After doing all that, create a pull request from your fork's branch to the upstream repository. You do that by clicking on this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219556366-14d291a0-20b4-427c-863d-c4d4195e68ad.png)<br/><br/>
-Write a descriptive title here:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219557051-33836717-361a-4a03-94c1-d8e1413c24d6.png)<br/><br/>
-And a useful description here:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219557086-59c01bf0-60da-4645-8e5a-96c7c061dd03.png)<br/><br/>
-Once you're prepared and you've written everything needed, click here:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219557134-9d38142b-4a4c-4955-9708-278ba674748a.png)<br/><br/>
+![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)<br/><br/>
+Make sure your forked repository is in sync with the upstream branch. You will have to do this periodically to ensure that your fork is up to date. You do that by clickin on `Sync fork`:<br/>
+![image](https://user-images.githubusercontent.com/84760072/219559314-5b2da1ee-2020-44f5-9555-8d0d345e3f36.png)<br/><br/>
+If your fork is out of date, something like this will appear. Compare the changes by clicking on `Compare`. Once you are satisfied with the changes, click on `Update Branch`:<br/>
 
 🎉 Good job, you have just contributed to this repo!
 
