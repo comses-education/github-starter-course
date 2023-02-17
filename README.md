@@ -456,10 +456,15 @@ Then, create a new branch in the repo. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219555316-d166aac0-8491-47bc-8fa8-693d5027104c.png)<br/><br/>
 And then this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)<br/><br/>
-Make whatever changes you want to make to the repository then commit and push it to your forked repo.<br/>
-![image](https://user-images.githubusercontent.com/84760072/219556361-1a8f9479-315d-448a-98b6-29f4d2e4b679.png)
-Create a pull request from your fork's branch to the upstream repository.<br/>
+Make whatever changes you want to make to the repository then commit and push it to your forked repo then create a pull request from your fork's branch to the upstream repository. You do that by clicking on this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219556366-14d291a0-20b4-427c-863d-c4d4195e68ad.png)<br/><br/>
+Write a descriptive title here:<br/>
+![image](https://user-images.githubusercontent.com/84760072/219557051-33836717-361a-4a03-94c1-d8e1413c24d6.png)<br/><br/>
+And a useful description here:<br/>
+![image](https://user-images.githubusercontent.com/84760072/219557086-59c01bf0-60da-4645-8e5a-96c7c061dd03.png)<br/><br/>
+Once you're prepared and you've written everything needed, click here:<br/>
+![image](https://user-images.githubusercontent.com/84760072/219557134-9d38142b-4a4c-4955-9708-278ba674748a.png)<br/><br/>
+
 🎉 Good job!
 
 
