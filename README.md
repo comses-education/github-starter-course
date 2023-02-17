@@ -450,7 +450,7 @@ Now, go to your forked repository. Make sure your fork is synced with the upstre
 A small modal will pop up. Click on 'Update Branch':<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219554817-ce5eee26-5834-49b0-86f4-2ffd54fd798f.png)<br/><br/>
 Then, create a new branch in the repo. You do that by clicking on this:<br/>
-![image](https://user-images.githubusercontent.com/84760072/219555316-d166aac0-8491-47bc-8fa8-693d5027104c.png)<br/><br/>
+![image](https://user-images.githubusercontent.com/84760072/219557855-440c15ba-8504-49a8-b5d0-ca4d627c304c.png)<br/><br/>
 And then this:<br/>
 ![image](https://user-images.githubusercontent.com/84760072/219555366-975de42a-20f4-46ac-a199-057bb4129e8e.png)<br/><br/>
 Make whatever changes you want to make to the repository then commit and push it to your forked repo. After doing all that, create a pull request from your fork's branch to the upstream repository. You do that by clicking on this:<br/>
