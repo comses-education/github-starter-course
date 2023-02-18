@@ -369,7 +369,7 @@ You can find a model of your choice from the [Netlogo Modeling Commons](http://m
 
 Once you have chosen and downloaded a Netlogo model, save the file to your local Github repository branch that you created.
 
-As you may have already learned in the [Good Practices for Scientific Software Training Module](https://www.comses.net/education/responsible-practices/), code should always have documentation. Let's add some documentation to accompany your Netlogo model. 
+As you may have already learned in the [Responsible Practices for Scientific Software Training Module](https://www.comses.net/education/responsible-practices/), code should always have documentation. Let's add some documentation to accompany your Netlogo model. 
 
 Copy information about the model to a plain text document. The information can be the description stored in the `Info` tab in the Netlogo model. Or it can be the description that accompanied the model in its online archive.
 
@@ -452,23 +452,26 @@ Usually your forks have the same name as the upstream repository so nothing need
 After forking the repository, you will be in your forked repository. Which looks something like this:  
 ![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)  
   
-Make sure your forked repository is in sync with the upstream branch. You will have to do this periodically to ensure that your fork is up to date. You do that by clickin on `Sync fork`:  
+Make sure your forked repository is in sync with the upstream branch. You may need to do this periodically to ensure that your fork is up to date. You do that by clicking on `Sync fork`:  
 ![image](https://user-images.githubusercontent.com/84760072/219559314-5b2da1ee-2020-44f5-9555-8d0d345e3f36.png)  
   
-If your fork is out of date, this box will appear. Compare the changes by clicking on `Compare`. Once you are satisfied with the changes, click on `Update Branch`:  
+If your fork is out of date, this box will appear. You can compare the changes by clicking on `Compare`. Once you are satisfied with the changes, click on `Update Branch`:  
 ![image](https://user-images.githubusercontent.com/84760072/219559801-46ab912b-5910-4e61-b5e1-9885b963ace1.png)  
   
-Commiting straight to the main branch is usually a bad idea. There are several reasons for this:  
-* If you create bugs, there is no way to 'go back' other than deleting and reversing commits. This method is a lot more error-prone and might also cause you to lose parts of the code that were ok.  
-* It means that commits have to be merged each time 2 people change a file. This is troublesome.  
-  
-As such, we make a new branch. You do that by clicking on `[number] branch`. [number] can be any number, all that matters is you click on it.  
+Committing directly to your main branch is almost always a bad idea when submitting a pull request. There's several reasons for this:  
+
+* if any additional changes are merged into the upstream repository's main branch _before_ your pull request gets approved and merged, your main branch and pull request will become out of sync with the upstream repository and possibly in conflict. To resolve those conflicts you'll need to rewrite history using git rebase (or go the nuclear option and delete your fork and start over again after it gets merged). Sometimes a pull request can take time for maintainers to properly review and assess, and critical bugfixes may take priority over your pull request. 
+* if the maintainer(s) of the upstream repository decide to perform a squash and merge or rebase and merge your fork's main branch will get out of sync with the upstream repository, forcing you to delete/refork or rewrite history on your fork
+
+In general, committing and pushing your changes onto a short lived feature branch gives you greater flexibility over how to manage and adjust your proposed changes.
+
+With all that in mind, let's go ahead and create a new branch. You can do that by clicking on the GitHub web UI's branch dropdown or go to the GitHub web UI's branch screen by clicking on the `[number] branch`. [number] is the number of active branches in the repository.
 ![image](https://user-images.githubusercontent.com/84760072/219560160-b87d5dfc-aa55-4051-bd7d-ab8add748190.png)  
   
 You will be redirected to this page. You then create a new branch by clicking on `New branch`  
 ![image](https://user-images.githubusercontent.com/84760072/219560296-4493f20d-b791-4266-b79a-d34cdd7d3841.png)  
   
-This modal will pop up. Give your branch an informative name under `Branch name` and then click on `Create branch`  
+This modal will pop up. Give your branch an informative name that clearly indicates its purpose under `Branch name` and then click on `Create branch`  
 ![image](https://user-images.githubusercontent.com/84760072/219560979-2db03899-15af-4aa9-b299-bfd022d850eb.png)  
   
 Make whatever changes 🔨 you want to make, then commit and push them to your fork. Once you are satisfied with your changes, you should make a pull request! You do that by clicking on `Contribute`  
@@ -476,7 +479,7 @@ Make whatever changes 🔨 you want to make, then commit and push them to your f
 A box will appear, click on `Open pull request`  
 ![image](https://user-images.githubusercontent.com/84760072/219561409-a82d6477-aae9-4908-8086-be050da0fc21.png)  
   
-Give your pull request a descriptive title and a useful description. Once you are ready, click on `Create pull request`  
+Give your pull request a informative title and description. Once you are ready, click on `Create pull request`  
 ![image](https://user-images.githubusercontent.com/84760072/219561698-a82d16bc-d6d6-4783-8222-e24c14239d04.png)  
   
 The maintainer(s) of this repository will now be able to review your changes and provide feedback and guidance on your proposed contributions. You may need to add more commits or close and open a new pull request based on their feedback.  
