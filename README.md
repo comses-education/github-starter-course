@@ -426,6 +426,7 @@ The [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
    peers as well as your future self and future collaborators.
 4. **Use tags and releases** to keep track of important coding milestones. Did this exact version of your computational model pass all of its tests and generate harrowing data that lead to publishable findings? Make sure it's fully synced with your GitHub repository (i.e., **commit** and **push** any available changes), then create a [release, tag, and DOI](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) that points at this version.
 
+![Git Fork-Branch-Pull Workflow](images/github-flowchart-diagram.png)
 
 ## Next Steps
 
