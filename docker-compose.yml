@@ -1,0 +1,7 @@
+services:
+  grip:
+    image: comses-education/github-starter-course
+    build:
+      context: .
+    ports:
+      - "6419:6419"
