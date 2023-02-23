@@ -4,4 +4,4 @@ services:
     build:
       context: .
     ports:
-      - "6419:6419"
+      - "127.0.0.1:6419:6419"
