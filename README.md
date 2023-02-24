@@ -1,4 +1,7 @@
 # :wave: The Basics of Git and GitHub
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## 🤓 Course overview and learning outcomes 
 
@@ -506,6 +509,20 @@ The maintainer(s) of this repository will now be able to review your changes and
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kmuraish"><img src="https://avatars.githubusercontent.com/u/115379678?v=4?s=100" width="100px;" alt="kmuraish"/><br /><sub><b>kmuraish</b></sub></a><br /><a href="#content-kmuraish" title="Content">🖋</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
