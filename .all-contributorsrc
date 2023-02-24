@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "kmuraish",
+      "name": "kmuraish",
+      "avatar_url": "https://avatars.githubusercontent.com/u/115379678?v=4",
+      "profile": "https://github.com/kmuraish",
+      "contributions": [
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "github-starter-course",
+  "projectOwner": "BlllueSea"
+}
