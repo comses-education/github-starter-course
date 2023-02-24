@@ -22,3 +22,6 @@ Please don't edit this section until you get to Assignment 2 of the GitHub class
 This is a section to learn more about resolving conflicts in Git.
 
 Creating conflicts in local.
+
+Creating conflicts here.
+
