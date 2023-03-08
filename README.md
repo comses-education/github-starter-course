@@ -2,9 +2,9 @@
 
 ## 🤓 Course overview and learning outcomes 
 
-This course is intended to be a condensed, comprehensive-enough introduction to version control systems, Git and GitHub. It is intended for people with little to no experience with either. 
+This course aims to be a condensed, comprehensive-enough introduction to version control systems, Git and GitHub for people with little to no experience with either.
 
-We would like to get a sense of how long it takes to go through this training module as well as gather feedback on what worked and what didn't. If you'd like to contribute to these efforts, please [post your experiences on our Education Forums](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's still a lot of room for improvement.
+We would also appreciate feedback on how long it takes to go through this training module besides what worked and what didn't. If you'd like to contribute to these efforts, please [post your experiences on our Education Forums](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's always room for improvement.
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
@@ -12,11 +12,11 @@ _from [XKCD](https://xkcd.com/1597/)_
 
 ### Objectives
 
-- develop a clear conceptual model for *What are version control systems and why should I use them? What is Git and how do I use it?*
+- develop a clear conceptual model of *What are version control systems and why should I use them? What is Git and how do I use it?*
 - gain familiarity with the GitHub web interface: edit files, clone and fork repositories, manage branches and pull requests, and resolve merge conflicts
 - practice basic git workflows - this particular course focuses on GUI clients like [GitHub Desktop](https://desktop.github.com) or integrated development environments like [VS Code](https://code.visualstudio.com) or [Atom](https://atom.io/) to interact with your local and remote Git repositories 
 
-We also maintain a [list of additional resources](#additional-resources-) that we've found useful over the years - please feel free to edit / update these! 🚀
+We also maintain a [list of additional resources](#additional-resources-) that we've found useful over the years - please feel free to edit / update these (see the contributing section at the end of this README)! 🚀
 
 ## :octocat: Git and GitHub
 
