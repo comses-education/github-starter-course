@@ -488,10 +488,10 @@ The maintainer(s) of this repository will now be able to review your changes and
 
 ## Additional Resources 📚
 
+* [Conventional Commits: a set of rules to create consistent and useful commit logs and messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [Short video on the big picture basics of GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be)
 * [Interactive lessons to help you learn GitHub skills](https://skills.github.com/)
 * [General Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
-* [Conventional Commits: a set of rules to create consistent and useful commit logs and messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [Critical beginner git user tips (command-line focused)](https://bssw.io/items/critical-beginner-git-usage-tips)
 * [Understanding the "GitHub flow", a useful workflow and process to guide how you use Git and GitHub](https://guides.github.com/introduction/flow/)
 * [How to use GitHub branches](https://www.youtube.com/watch?v=H5GJfcp3p4Q&feature=youtu.be)
@@ -501,3 +501,8 @@ The maintainer(s) of this repository will now be able to review your changes and
 * [Another interactive tool to learn Git concepts using a browser](https://learngitbranching.js.org/)
 * [Pro Git v2 - a full and free ebook for an in-depth understanding of Git](https://git-scm.com/book/en/v2)
 * [Atlassian's Git tutorials](https://www.atlassian.com/git/tutorials)
+
+### GitHub Desktop
+
+* [General GitHub Desktop Documentation Overview](https://docs.github.com/en/desktop)
+* [Using Git rebase in GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/keeping-your-local-repository-in-sync-with-github/syncing-your-branch#rebasing-your-project-branch-onto-another-branch)
