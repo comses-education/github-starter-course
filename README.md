@@ -451,8 +451,9 @@ Usually your forks have the same name as the upstream repository so nothing need
 ![image](https://user-images.githubusercontent.com/84760072/219558663-8f2a6a63-fa10-428b-99a0-ffb316b3a521.png)  
   
 After forking the repository, you will be in your forked repository. Which looks something like this:  
-![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)  
-  
+![image](https://user-images.githubusercontent.com/84760072/219558813-56130098-7f28-4b18-9d60-5f29d01fd1a0.png)
+
+#### Keep your fork synced with upstream
 Make sure your forked repository is in sync with the upstream branch. You may need to do this periodically to ensure that your fork is up to date. You do that by clicking on `Sync fork`:  
 ![image](https://user-images.githubusercontent.com/84760072/219559314-5b2da1ee-2020-44f5-9555-8d0d345e3f36.png)  
   
