@@ -4,7 +4,7 @@
 
 This course aims to be a condensed, comprehensive-enough introduction to version control systems, Git and GitHub for people with little to no experience with either.
 
-We would also appreciate feedback on how long it takes to go through this training module besides what worked and what didn't. If you'd like to contribute to these efforts, please [post your experiences on our Education Forums](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's always room for improvement.
+We would appreciate feedback on how long it takes to go through this training module in addition to what worked and what didn't. If you'd like to contribute to these efforts, please [post your experiences on our Education Forums](https://forum.comses.net/c/education/28). This is an initial pilot of the course based on several years of teaching it to a live audience, and there's lots of room for improvement.
 
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
@@ -13,30 +13,30 @@ _from [XKCD](https://xkcd.com/1597/)_
 ### Objectives
 
 - develop a clear conceptual model of *What are version control systems and why should I use them? What is Git and how do I use it?*
-- gain familiarity with the GitHub web interface: edit files, clone and fork repositories, manage branches and pull requests, and resolve merge conflicts
-- practice basic git workflows - this particular course focuses on GUI clients like [GitHub Desktop](https://desktop.github.com) or integrated development environments like [VS Code](https://code.visualstudio.com) or [Atom](https://atom.io/) to interact with your local and remote Git repositories 
+- gain familiarity with the GitHub web interface: edit files, clone and fork repositories, manage branches and pull requests, resolve merge conflicts, keep a fork in sync with its upstream, etc.
+- practice basic git workflows. This particular course focuses on GUI clients like [GitHub Desktop](https://desktop.github.com) or integrated development environments like [VS Code](https://code.visualstudio.com) to interact with your local and remote Git repositories 
 
-We also maintain a [list of additional resources](#additional-resources-) that we've found useful over the years - please feel free to edit / update these (see the contributing section at the end of this README)! 🚀
+We also maintain a [list of additional resources](#additional-resources) that we've found useful over the years. Please feel free to add or update these via the contributing section at the end of this README.
 
 ## :octocat: Git and GitHub
 
 Git is a **distributed Version Control System (VCS)**.
 
-A **version control system** is a software tool that helps you **track changes to a set of files**. These can be any kinds of files: cat pictures, movies, plain-text source code files, CSVs, NetCDF files, shapefiles, zipfiles, tarballs, Word documents, PDFs, etc. 
+A **version control system** is a software tool that helps you **track changes to a set of files**. These can be any kinds of files: cat pictures, movies, plain-text source code files, CSVs, NetCDF or HDF5 files, shapefiles, compressed zip files or tarballs, Office documents from Microsoft Office or LibreOffice, PDFs, etc.
 
-To get started, you've got to tell the version control system which files you want to keep track of: let's say the NetLogo model, `boids.nlogo` and a `README.md` file that describes and documents the model. This is the _initial_ version of your files. Whenever you make subsequent changes to your tracked file(s), you tell the version control system, _"Hey! Keep track of the current state of this file now."_ and it will efficiently store the difference between the current state of the file and the previous state of the file from the last time you told the version control system, _"Hey! Keep track of the current state of this file."_. This previous state could be the _initial_ version or any subsequent version. For simplicity you can think of it as v1, v2, v3, v4, etc.
+To get started, we've got to tell the version control system which files we want to keep track of: let's say the NetLogo model, `boids.nlogo` and a `README.md` file that describes and documents the [boids model](https://en.wikipedia.org/wiki/Boids). This is the _initial_ version of your files. Whenever you make subsequent changes to your tracked file(s), you tell the version control system, _"Hey! Keep track of the current state of this file now."_ and it will efficiently store the difference between the current state of the file and the previous state of the file from the last time you told the version control system, _"Hey! Keep track of the current state of this file."_. This previous state could be the _initial_ version or any subsequent version. For simplicity we can think of it as v1, v2, v3, v4, etc.
 
-Most of the time we want to keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary files in Git as well like images, zipfiles, or any other files containing binary (i.e., non plain-text) data.
+Most of the time we want to keep track of **plain-text files** in version control systems, like source code, configuration files and scripts. It's also OK to store binary files in Git as well like images, zipfiles, or any other files containing binary (i.e., non plaintext) data.
 
-However, **you should avoid** putting *generated* files into Git like compiled executables (e.g. Windows .exe, macOS application bundles, Linux ELF executables), compiled C object files or Java .class files. These files are *derivatives* and change when their source material changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. Put the **recipe** into Git, not the **cake**! So, instead of committing the 10 TBs of raw data you generated to create a hauntingly evocative figure for your publication, commit the code, documentation, and permanent identifiers / references to the related research objects used to generate that data + figure. You probably **should include the figures if they are not too large** - even though they are generated, it's always a good idea to have a succinct visual reference for what your model does.
+However, **you should avoid** putting *generated* files into Git like compiled executables (e.g. Windows .exe, macOS application bundles, Linux ELF executables), compiled C object files or Java .class files. These files are *derivatives* and change when their source material changes. They also tend to stop working as the host operating system or language runtimes and dependencies evolve. Instead, we recommend that you only put *source material* into Git, the things used to **create** the derivative. Put the **recipe** into Git, not the **cake**! So, instead of committing the 10 TBs of raw data you generated to create a hauntingly evocative figure for your publication, commit the code, documentation, and permanent identifiers / references to the related research objects used to generate that data + figure. You probably **should include the figures if they are not too large**. Even though these images are generated, it's always a good idea to have a succinct visual reference for what the kinds of data your model is generating and serves as a historical record for what it did generate.
 
 _NOTE: handling large-scale, multi-dimensional ABM data outputs is an ongoing challenge, best left to data repositories like Figshare, the Open Science Framework, Dataverse, etc., **not** source code repositories like Git or the CoMSES Model Library!_
 
-For more information on domain specific repositories and guidance from Nature Scientific Data, please see https://www.nature.com/sdata/policies/repositories
+For more information on domain specific repositories and guidance from Nature Scientific Data, please see https://www.nature.com/sdata/policies/repositories or CoMSES' guidance at https://www.comses.net/resources/trusted-digital-repositories/
 
 ### Why do we need version control systems?
 
-If you've ever had to collaborate with others on a paper or team coding project, you may have experienced something like this:
+If you've ever collaborated with others on a paper or team coding project, you may have experienced something like this:
 
 ![PhD Comics: final.doc](https://phdcomics.com/comics/archive/phd101212s.gif)
 
@@ -44,23 +44,23 @@ or this:
 
 ![NetLogo: Neolithic Ecological expansion many versions](images/neolithic-versions.png)
 
-These are typical ad-hoc filename based versioning systems where the name of the file gets changed every time some changes are made (of course, there's no guarantee that changes were made, right? You can change a filename at any time). 
+These are common ad-hoc filename based versioning systems where the name of the file is changed every time some changes are made (and of course, there's no guarantee that actual changes were made, right? You can change a filename at any time regardless of whether its contents changed).
 
-What's lacking from this type of versioning? Short answer: lots of context. What changes were made? Who made them? When were they made? Why were they made?
+What's missing from this type of versioning? Lots of context. What changes were made? Who made them? When were they made? Why were they made?
 
-Git helps you and your team maintain a clean record of work - which files changed, what were the changes, when did they occur, and why were they made. It also helps you easily switch between versions so you can always get back to that Last Known Good Setup that you had before you began tinkering or experimenting with something new, and it helps you experiment with new things or maintain existing code over time with _branches_, allowing you to maintain and preserve multiple views over your codebase concurrently.
+Git and other version control systems help you and your team maintain a clean record of work - which files changed, what were the changes, when did they occur, and why were they made. Version control systems also help you easily switch between versions so you can always get back to that Last Known Good Setup that you had before you began tinkering or experimenting with something new, and it helps you try new ideas or maintain existing code over time with _branches_, which let you maintain and preserve multiple, independently evolving, versions of your codebase at the same time.
 
-Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *What changes were made, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of scientific code requires discipline and maintenance, like keeping a house clean or maintaining a garden.
+Git and GitHub can help you transparently document and preserve the provenance of your scientific code. *What changes were made, when, from whom, and why* can all be reliably stored and made accessible by Git, facilitating future comprehension and reuse. However, a clean Git history that clearly demonstrates the evolving life of a piece of research software requires a commitment to discipline and a maintenance, just like keeping a house clean or designing and building a garden.
 
-GitHub is a way to use the power of Git online with an "easy-to-use" web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
+GitHub is a way to use the power of Git online through a web interface. It’s widely used in the software world and beyond to collaborate and maintain the history of projects.
 
 ## Key Concepts
 
-Let's define some common terms you'll find in Git and GitHub.
+Let's first define some common terms you'll find in Git and GitHub.
 
 ### Repositories
 
-A repository is where your project work happens -- it is the _root project_ folder with all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with a Git repository, you can [clone it](#clone-a-repository), which downloads a local copy of the Git repository to the computer where you issued the `clone` request.
+A repository is where your project work happens -- the _root project_ folder with all your project’s files: source code, documentation, configuration files, input data files, data analysis scripts, images, etc. To start working with an existing Git repository, you will [clone it](#clone-a-repository), which downloads a full copy of the Git repository to the computer where you issued the `clone` request.
 
 Repositories can be `local` (on your desktop or laptop) or `remote` (e.g., stored in the cloud ☁️  on GitHub, GitLab, BitBucket, etc).
 
