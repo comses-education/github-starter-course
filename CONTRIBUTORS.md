@@ -1,6 +1,6 @@
 # CoMSES Winter School Git Tutorial
 
-This GitHub classroom repository was based off https://github.com/education/github-starter-course but has been heavily modified for the CoMSES Winter School.
+This GitHub classroom repository was based off the [GitHub Starter Course](https://github.com/classroom-resources/github-starter-course) and has been modified for the CoMSES Community and Winter/Spring Schools.
 
 ### Contributors
 
@@ -8,5 +8,6 @@ This GitHub classroom repository was based off https://github.com/education/gith
 - Manuela Vanegas Ferro
 - Sean Bergin
 - Marco Janssen
+- Noel Ngu
 
-Thanks to the CoMSES Winter School participants who are piloting this material for (hopefully!) providing constructive feedback!
+Our thanks to all the CoMSES members and Winter/Spring School participants for helping pilot and improve this material!
