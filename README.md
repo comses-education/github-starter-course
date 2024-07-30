@@ -489,6 +489,7 @@ The maintainer(s) of this repository will now be able to review your changes and
 
 ## Additional Resources 📚
 
+* [The GitHub Skills organization](https://github.com/skills) has an easy to follow [Introduction to GitHub course that also covers commits, branches, and pull requests](https://github.com/skills/introduction-to-github)
 * [Conventional Commits: a set of rules to create consistent and useful commit logs and messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [Short video on the big picture basics of GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be)
 * [Interactive lessons to help you learn GitHub skills](https://skills.github.com/)
