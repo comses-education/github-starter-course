@@ -489,18 +489,15 @@ The maintainer(s) of this repository will now be able to review your changes and
 
 ## Additional Resources 📚
 
-* [The GitHub Skills organization](https://github.com/skills) has an easy to follow [Introduction to GitHub course that also covers commits, branches, and pull requests](https://github.com/skills/introduction-to-github)
+* [Learn GitHub](https://learn.github.com/) appears to be coalescing into the launching point for mastering GitHub that supports [customization of your own learning experience](https://learn.github.com/learning).
+* [GitHub Skills: Interactive lessons to help you learn GitHub skills](https://skills.github.com/)
 * [Conventional Commits: a set of rules to create consistent and useful commit logs and messages](https://www.conventionalcommits.org/en/v1.0.0/)
 * [Short video on the big picture basics of GitHub](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be)
-* [Interactive lessons to help you learn GitHub skills](https://skills.github.com/)
-* [General Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
-* [Critical beginner git user tips (command-line focused)](https://bssw.io/items/critical-beginner-git-usage-tips)
+* [Critical beginner git user tips (command-line focused) from the Better Scientific Software Community](https://bssw.io/items/critical-beginner-git-usage-tips)
 * [Understanding the "GitHub flow", a useful workflow and process to guide how you use Git and GitHub](https://guides.github.com/introduction/flow/)
 * [How to use GitHub branches](https://www.youtube.com/watch?v=H5GJfcp3p4Q&feature=youtu.be)
 * [Interactive Git training materials](https://githubtraining.github.io/training-manual/#/01_getting_ready_for_class)
-* [GitHub Education community forum](https://github.com/orgs/community/discussions/categories/github-education)
-* [GitHub community forum](https://github.com/orgs/community/discussions/)
-* [Another interactive tool to learn Git concepts using a browser](https://learngitbranching.js.org/)
+* [An interactive tool to learn Git concepts in the browser](https://learngitbranching.js.org/)
 * [Pro Git v2 - a full and free ebook for an in-depth understanding of Git](https://git-scm.com/book/en/v2)
 * [Atlassian's Git tutorials](https://www.atlassian.com/git/tutorials)
 
